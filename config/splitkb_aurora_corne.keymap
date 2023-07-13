@@ -37,21 +37,34 @@
     };
   };
 
+  behaviors {
+    hm: homerow_mods {
+      compatible = "zmk,behavior-hold-tap";
+      label = "HOMEROW_MODS";
+      #binding-cells = <2>;
+      tapping-term-ms = <150>;
+      quick_tap_ms = <0>;
+      flavor = "tap-preferred";
+      bindings = <&kp>, <&kp>;
+    };
+  };
+
   keymap {
     compatible = "zmk,keymap";
 
     qwerty_layer {
 // -----------------------------------------------------------------------------------------
 // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
+// | CTRL |  A -> LGUI |  S -> LALT  |  D -> LCTRL  |  F -> LSHIFT  |  G  |   |  H  |  J -> RSHIFT |  K -> RCTRL |  L -> RALT  |  ; -> RGUI  |  '   |
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-//                    | GUI | SYMBOL/BSPC | TAB |   | ENT | CONTROL/SPC | ALT |
+//                    | ESC -> GUI | TAB -> SYMBOL | SPC |   | ENT | BSPC -> CONTROL | ALT |
+//
       label = "QWERTY";
       bindings = <
-&kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
-&kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-&kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
-                &kp LGUI &lt SYMBOL BSPC &mo  &kp TAB   &kp RET &lt CONTROL SPACE &kp RALT
+&kp TAB   &kp Q       &kp W       &kp E       &kp R         &kp T   &kp Y &kp U         &kp I       &kp O       &kp P         &kp BSPC
+&kp LCTRL &hm LGUI A  &hm LALT S  &hm LCTRL D &hm LSHIFT F  &kp G   &kp H &hm RSHIFT J  &hm RCTRL K &hm RALT L  &hm RGUI SEMI &kp SQT
+&kp LSHFT &kp Z       &kp X       &kp C       &kp V         &kp B   &kp N &kp M         &kp COMMA   &kp DOT     &kp FSLH      &kp ESC
+                &hm LGUI ESC &lt SYMBOL TAB  &kp SPACE   &kp RET &lt CONTROL BSPC  &kp RALT
       >;
     };
 
@@ -72,15 +85,16 @@
 
     control_layer {
 // -----------------------------------------------------------------------------------------
-// |  TAB |  1  |  2  |   3   |   4   |   5   |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-// | CTRL |     | END | PG_DN | PG_UP |  HOME |   | LFT | DWN |  UP | RGT |     |      |
-// | SHFT |     |     |       |   '   |       |   |     |  `  |     |     |     |      |
+// |  TAB |  1  |  2  |  3  |  4  |    5   |   |  6  |  7  |  8  |  9  |  0  | BKSP |
+// | CTRL |     |     |     |     |  PG_UP |   | LFT | DWN |  UP | RGT |     |      |
+// | SHFT |     |     |     |  '  |  PG_DN |   |     |  `  |     |     |     |      |
+// TODO Add Caret + add ¨
 //                    |  |       |    |   |  |     |  |
       label = "CONTRL";
       bindings = <
-&kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7    &kp N8 &kp N9    &kp N0 &kp BSPC
-&kp LCTRL  &none       &kp END      &kp PG_DN    &kp PG_UP    &kp HOME       &kp LEFT &kp DOWN  &kp UP &kp RIGHT &none &none
-&kp LSHFT  &none       &none       &none       &kp SQT      &none         &none   &kp GRAVE &none &none    &none &none
+&kp TAB    &kp N1      &kp N2      &kp N3      &kp N4      &kp N5         &kp N6   &kp N7    &kp N8 &kp N9    &kp N0 &kp BSPC
+&kp LCTRL  &trans      &trans      &trans      &trans      &kp PG_UP      &kp LEFT &kp DOWN  &kp UP &kp RIGHT &none  &none
+&kp LSHFT  &none       &none       &none       &kp SQT     &kp PG_DN      &none    &kp GRAVE &none  &none     &none  &none
                               &trans &trans   &trans   &trans   &trans    &trans
       >;
     };
@@ -103,13 +117,13 @@
     shortcuts_layer {
 // -----------------------------------------------------------------------------------------
 // |  TAB |  1  |  2  |   3   |   4   |   5   |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-// | CTRL |     |     |       |       |       |   |  0  |  4  |  5  |  6  |      |     |
-// | SHFT |     |     |       |       |       |   |     |  1  |  2  |  3  |      |     |
+// | CTRL |     |     |       |       |       |   |  0  |  4  |  5  |  6  |     |  TAB |
+// | SHFT |     |     |       |       |       |   |     |  1  |  2  |  3  |     |      |
 //                    |  |     |  |   |  |     |  |
       label = "SHRTCT";
       bindings = <
 &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5        &kp N6  &kp N7  &kp N8  &kp N9    &kp N0 &kp BSPC
-&kp LCTRL  &none       &none       &none       &none       &none        &kp N0  &kp N4  &kp N5  &kp N6    &none &none
+&kp LCTRL  &none       &none       &none       &none       &none        &kp N0  &kp N4  &kp N5  &kp N6    &none &kp TAB
 &kp LSHFT  &none       &none       &none       &none      &none         &none  &kp N1  &kp N2  &kp N3    &none &none
                        &trans &trans   &trans   &trans   &trans    &trans
       >;
