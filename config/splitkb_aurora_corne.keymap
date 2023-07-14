@@ -88,7 +88,7 @@
 // |  TAB |  1  |  2  |  3  |  4  |    5   |   |  6  |  7  |  8  |  9  |  0  | BKSP |
 // | CTRL |     |     |     |     |  PG_UP |   | LFT | DWN |  UP | RGT |     |      |
 // | SHFT |     |     |     |  '  |  PG_DN |   |     |  `  |     |     |     |      |
-// TODO Add Caret + add ¨
+// TODO Add Caret + add ¨, add home + end.
 //                    |  |       |    |   |  |     |  |
       label = "CONTRL";
       bindings = <
