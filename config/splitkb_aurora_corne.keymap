@@ -88,7 +88,7 @@
 // |  | LGUI | LALT | LCTRL | LSHIFT |    |   | CAPSLOCK | LFT   | DWN   | UP    | RGT  |  |
 // |  |      |      |       |        |    |   | Insert   | Home  | PG_DN | PG_UP | END  |  |
 //                               |  |  |  |   | ENT | BSPC -> NUM | DEL |
-      label = "NAVIGATION";
+      label = "NAV";
       bindings = <
 &none &trans   &trans   &trans    &trans     &trans    &kp K_REDO   &kp K_PASTE &kp K_COPY &kp K_CUT &kp K_UNDO &none
 &none &kp LGUI &kp LALT &kp LCTRL &kp LSHIFT &trans    &u_caps_word &kp LEFT    &kp DOWN   &kp UP    &kp RIGHT  &none
