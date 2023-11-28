@@ -45,6 +45,10 @@
       if-layers = <NUM NAV>;
       then-layer = <ADJUST>;
     };
+  };
+
+    conditional_layers {
+    compatible = "zmk,conditional-layers";
     tri_layer {
       if-layers = <MEDIA FUNC>;
       then-layer = <SHORTCUTS>;
