@@ -41,15 +41,11 @@
 
   conditional_layers {
     compatible = "zmk,conditional-layers";
-    tri_layer {
+    adjust_layer {
       if-layers = <NUM NAV>;
       then-layer = <ADJUST>;
     };
-  };
-
-    conditional_layers {
-    compatible = "zmk,conditional-layers";
-    tri_layer {
+    shortcuts_layer {
       if-layers = <MEDIA FUNC>;
       then-layer = <SHORTCUTS>;
     };
