@@ -14,14 +14,13 @@
 
 /* LAYERS */
 #define BASE  0
-#define NAV   1
-#define MOUSE 2
+#define SYM   1
+#define NUM   2
 #define MEDIA 3
-#define NUM   4
-#define SYM   5
+#define MOUSE 4
+#define NAV   5
 #define FUNC  6
 #define ADJUST   7
-#define SHORTCUTS   8
 
 /* MACROS */
 // #define MUTE LG(LS(M)) // For Teams (Should be tested)
@@ -42,13 +41,15 @@
   conditional_layers {
     compatible = "zmk,conditional-layers";
     adjust_layer {
-      if-layers = <NUM NAV>;
+      if-layers = <NUM SYM>;
       then-layer = <ADJUST>;
     };
+    /*
     shortcuts_layer {
       if-layers = <MEDIA FUNC>;
       then-layer = <SHORTCUTS>;
     };
+    */
   };
 
   behaviors {
@@ -68,32 +69,77 @@
 
     qwerty_layer {
 // -----------------------------------------------------------------------------------------
-// |  TAB | Q         | W         | E          |  R          |  T  |   |  Y  | U           |  I         |  O        |  P        | BKSP |
-// | CTRL | A -> LGUI | S -> LALT | D -> LCTRL | F -> LSHIFT |  G  |   |  H  | J -> RSHIFT | K -> RCTRL | L -> RALT | ; -> RGUI |  '   |
-// | SHFT | Z         | X         | C          |  V          |  B  |   |  N  | M           |  ,         |  .        |  /        | ESC  |
-//                      | ESC -> MEDIA | SPC -> NAV | TAB -> MOUSE |   | ENT -> SYM | BSPC -> NUM | DEL -> FUNC |
+// |  | Q         | W         | E          |  R          |  T  |   |  Y  | U           |  I         |  O        |  P        |  |
+// |  | A -> LGUI | S -> LALT | D -> LCTRL | F -> LSHIFT |  G  |   |  H  | J -> RSHIFT | K -> RCTRL | L -> RALT | ; -> RGUI |  |
+// |  | Z         | X         | C          |  V          |  B  |   |  N  | M           |  ,         |  .        |  /        |  |
+//                      | ESC -> MEDIA | TAB -> NAV | SPC -> NUM |   | ENT -> SYM | BSPC -> MOUSE | DEL -> FUNC |
 //
       label = "QWERTY";
       bindings = <
-&kp TAB   &kp Q       &kp W       &kp E       &kp R         &kp T   &kp Y &kp U         &kp I       &kp O       &kp P         &kp BSPC
-&kp LCTRL &hm LGUI A  &hm LALT S  &hm LCTRL D &hm LSHIFT F  &kp G   &kp H &hm RSHIFT J  &hm RCTRL K &hm RALT L  &hm RGUI SEMI &kp SQT
-&kp LSHFT &kp Z       &kp X       &kp C       &kp V         &kp B   &kp N &kp M         &kp COMMA   &kp DOT     &kp FSLH      &kp ESC
-                &lt MEDIA ESC &lt NAV SPACE  &lt MOUSE TAB   &lt SYM RET &lt NUM BSPC  &lt FUNC DEL
+&none &kp Q       &kp W       &kp E       &kp R         &kp T   &kp Y &kp U         &kp I       &kp O       &kp P         &none
+&none &hm LGUI A  &hm LALT S  &hm LCTRL D &hm LSHIFT F  &kp G   &kp H &hm RSHIFT J  &hm RCTRL K &hm RALT L  &hm RGUI SEMI &none
+&none &kp Z       &kp X       &kp C       &kp V         &kp B   &kp N &kp M         &kp COMMA   &kp DOT     &kp FSLH      &none
+                &lt MEDIA ESC &lt NAV TAB  &lt NUM SPACE   &lt SYM RET &lt MOUSE BSPC  &lt FUNC DEL
       >;
     };
 
-    navigation_layer {
+    symbol_layer {
 // -----------------------------------------------------------------------------------------
-// |  |      |      |       |        |    |   | Redo     | Paste | Copy  | Cut   | Undo |  |
-// |  | LGUI | LALT | LCTRL | LSHIFT |    |   | CAPSLOCK | LFT   | DWN   | UP    | RGT  |  |
-// |  |      |      |       |        |    |   | Insert   | Home  | PG_DN | PG_UP | END  |  |
-//                               |  |  |  |   | ENT | BSPC -> NUM | DEL |
-      label = "NAV";
+// |  |  ~  |  @  |  {  |  }  | "|" |   |  ^  |  _  |  +  |  /  | CAPS_WORD |  |
+// |  |  # -> LGUI  |  $ -> LALT  |  ( -> LCTRL  |  ) -> LSHIFT |  `  |   |  /  |  - -> RSHIFT |  = -> RCTRL |  * -> RALT |     : -> RGUI    |  |
+// |  |  %  |  ^  |  [  |  ]  |  !  |   |  &  |  ?  |  <  |  >  |     \     |  |
+//                         |  |  |  |   |  |  |  |
+      label = "SYMBOL";
       bindings = <
-&none &trans   &trans   &trans    &trans     &trans    &kp K_REDO   &kp K_PASTE &kp K_COPY &kp K_CUT &kp K_UNDO &none
-&none &kp LGUI &kp LALT &kp LCTRL &kp LSHIFT &trans    &u_caps_word &kp LEFT    &kp DOWN   &kp UP    &kp RIGHT  &none
-&none &trans   &trans   &trans    &trans     &trans    &kp INS      &kp HOME    &kp PG_DN  &kp PG_UP &kp END    &none
-                              &trans &trans    &trans    &kp RET   &lt NUM BSPC    &kp DEL
+&none &kp TILDE  &kp AT    &kp LBRC &kp RBRC  &kp PIPE     &kp CARET &kp UNDER &kp PLUS  &kp SLASH &caps_word  &none
+&none &hm LGUI HASH  &hm LALT DLLR  &hm LCTRL LPAR &hm LSHIFT RPAR  &kp GRAVE    &kp SLASH &hm RSHIFT MINUS &hm RCTRL EQUAL &hm RALT STAR  &hm RGUI COLON     &none
+&none &kp PRCNT &kp CARET &kp LBKT &kp RBKT  &kp EXCL    &kp AMPS  &kp QMARK &kp LT    &kp GT    &kp BACKSLASH &none
+                       &trans &trans   &trans   &trans   &trans    &trans
+      >;
+    };
+
+    number_layer {
+// -----------------------------------------------------------------------------------------
+// |  |  1  |  2  |   3   |   4   |   5   |   |  6  |  7  |  8  |  9  |  0  |  |
+// |  |     |     |       |       |       |   |  0  |  4  |  5  |  6  |     |   |
+// |  |     |     |       |       |       |   |     |  1  |  2  |  3  |     |      |
+//                    |  |     |  |   |  |     |  |
+      label = "SHRTCT";
+      bindings = <
+&none    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5        &kp N6  &kp N7  &kp N8  &kp N9    &kp N0 &none
+&none  &none       &none       &none       &none       &none        &kp N0  &kp N4  &kp N5  &kp N6    &none &none
+&none  &none       &none       &none       &none      &none         &none  &kp N1  &kp N2  &kp N3    &none &none
+                       &trans &trans   &trans   &trans   &trans    &trans
+      >;
+    };
+
+    number_layer {
+// -----------------------------------------------------------------------------------------
+// |  | [ | 7 | 8 | 9 | ] |   |  |        |       |      |      |  |
+// |  | ' | 4 | 5 | 6 | = |   |  | RSHIFT | RCTRL | RALT | RGUI |  |
+// |  | ` | 1 | 2 | 3 | \ |   |  |        |       |      |      |  |
+//            | . | 0 -> NAV | - |   |  |        |       |
+      label = "NUMBER";
+      bindings = <
+&none &kp LBKT  &kp N7 &kp N8  &kp N9 &kp RBKT        &none &none      &none      &none    &none    &none
+&none &kp SQT  &kp N4 &kp N5  &kp N6 &kp EQUAL       &none &kp RSHIFT &kp  RCTRL &kp RALT &kp RGUI &none
+&none &kp GRAVE &kp N1 &kp N2  &kp N3 &kp BACKSLASH   &none &none      &none      &none    &none    &none
+                       &kp DOT &lt NAV N0 &kp MINUS       &trans &trans &trans
+      >;
+    };
+
+    adjust_layer {
+// -----------------------------------------------------------------------------------------
+// |  |      |      |       | OUT_TOG | EP toggle |   | BT0 |     BT1       |   BT2    |   BT3    |  BT4    |  |
+// |  | LGUI | LALT | LCTRL | LSHIFT  |           |   |     | Prev       | Vol - | Vol + | Next |  |
+// |  |      |      |       |         |           |   |     |         |    |    |   |  |
+//                                       |  |  |  |   | STOP      | Play/Pause | K_MUTE -> FUNC |
+      label = "MEDIA";
+      bindings = <
+&none &none    &none    &none     &u_out_tog &u_ep_tog &u_bt_sel_0  &u_bt_sel_1 &u_bt_sel_2 &u_bt_sel_3  &u_bt_sel_4     &none
+&none &kp LGUI &kp LALT &kp LCTRL &kp LSHIFT &none     &none        &kp C_PREV   &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT   &none
+&none &none    &none    &none     &none      &none     &none        &none &none &none &none &none
+                              &trans &trans   &trans   &kp C_STOP   &kp C_PP    &lt FUNC K_MUTE
       >;
     };
 
@@ -113,48 +159,18 @@
       >;
     };
 
-    media_layer {
+    navigation_layer {
 // -----------------------------------------------------------------------------------------
-// |  |      |      |       |        |  |   |           |            |       |       |      |  |
-// |  | LGUI | LALT | LCTRL | LSHIFT |  |   | EP toggle | Prev       | Vol - | Vol + | Next |  |
-// |  |      |      |       |        |  |   | OUT_TOG   | BT0        | BT1   | BT2   | BT3  |  |
-//                             |  |  |  |   | STOP      | Play/Pause | K_MUTE -> FUNC |
-      label = "MEDIA";
+// |  |      |      |       |        |    |   | Redo     | Paste | Copy  | Cut   | Undo |  |
+// |  | LGUI | LALT | LCTRL | LSHIFT |    |   | CAPSLOCK | LFT   | DWN   | UP    | RGT  |  |
+// |  |      |      |       |        |    |   | Insert   | Home  | PG_DN | PG_UP | END  |  |
+//                               |  |  |  |   | ENT | BSPC -> NUM | DEL |
+      label = "NAV";
       bindings = <
-&none &none    &none    &none     &none      &none   &none        &none        &none        &none        &none        &none
-&none &kp LGUI &kp LALT &kp LCTRL &kp LSHIFT &none   &u_ep_tog        &kp C_PREV   &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT   &none
-&none &none    &none    &none     &none      &none   &u_out_tog &u_bt_sel_0 &u_bt_sel_1 &u_bt_sel_2 &u_bt_sel_3 &none
-                              &trans &trans   &trans   &kp C_STOP   &kp C_PP    &lt FUNC K_MUTE
-      >;
-    };
-
-    number_layer {
-// -----------------------------------------------------------------------------------------
-// |  | [ | 7 | 8 | 9 | ] |   |  |        |       |      |      |  |
-// |  | ' | 4 | 5 | 6 | = |   |  | RSHIFT | RCTRL | RALT | RGUI |  |
-// |  | ` | 1 | 2 | 3 | \ |   |  |        |       |      |      |  |
-//            | . | 0 -> NAV | - |   |  |        |       |
-      label = "NUMBER";
-      bindings = <
-&none &kp LBKT  &kp N7 &kp N8  &kp N9 &kp RBKT        &none &none      &none      &none    &none    &none
-&none &kp SQT  &kp N4 &kp N5  &kp N6 &kp EQUAL       &none &kp RSHIFT &kp  RCTRL &kp RALT &kp RGUI &none
-&none &kp GRAVE &kp N1 &kp N2  &kp N3 &kp BACKSLASH   &none &none      &none      &none    &none    &none
-                       &kp DOT &lt NAV N0 &kp MINUS       &trans &trans &trans
-      >;
-    };
-
-    symbol_layer {
-// -----------------------------------------------------------------------------------------
-// |  | { | & | * | ) | }   |   |  |        |       |      |      |  |
-// |  | " | $ | % | ^ | +   |   |  | RSHIFT | RCTRL | RALT | RGUI |  |
-// |  | ~ | ! | @ | # | "|" |   |  |        |       |      |      |  |
-//            | ( | ) | _   |   |  |        |       |
-      label = "SYMBOL";
-      bindings = <
-&none &kp LBRC  &kp AMPS &kp STAR  &kp RPAR  &kp RBRC        &none &none      &none      &none    &none    &none
-&none &kp DQT &kp DLLR &kp PRCNT &kp CARET &kp EQUAL       &none &kp RSHIFT &kp  RCTRL &kp RALT &kp RGUI &none
-&none &kp TILDE &kp EXCL &kp AT    &kp HASH  &kp BACKSLASH   &none &none      &none      &none    &none    &none
-                       &kp LPAR &kp RPAR &kp UNDER           &trans &trans &trans
+&none &trans   &trans   &trans    &trans     &trans    &kp K_REDO   &kp K_PASTE &kp K_COPY &kp K_CUT &kp K_UNDO &none
+&none &kp LGUI &kp LALT &kp LCTRL &kp LSHIFT &trans    &u_caps_word &kp LEFT    &kp DOWN   &kp UP    &kp RIGHT  &none
+&none &trans   &trans   &trans    &trans     &trans    &kp INS      &kp HOME    &kp PG_DN  &kp PG_UP &kp END    &none
+                              &trans &trans    &trans    &kp RET   &lt NUM BSPC    &kp DEL
       >;
     };
 
@@ -173,7 +189,7 @@
       >;
     };
 
-    adjust_layer {
+    adjust_layer_TODELETE {
 // -----------------------------------------------------------------------------------------
 // | OUT_BLE |  F1  |  F2  | F3    | F4    |  F5        |   |  F6 |  F7 |  F8 |  F9 |  F10 | OUT_USB |
 // | K_MUTE  | Prev | Next | Vol - | Vol + | Play/Pause |   |     |     |     |     |      |         |
@@ -184,21 +200,6 @@
 &out OUT_BLE &kp F1        &kp F2          &kp F3          &kp F4          &kp F5          &kp F6  &kp F7  &kp F8 &kp F9   &kp F10 &out OUT_USB
 &kp K_MUTE   &kp C_PREV    &kp C_NEXT      &kp C_VOL_DN    &kp C_VOL_UP    &kp C_PP        &none  &none  &none &none   &none &none
 &bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4    &none  &none  &none &none   &none &none
-                       &trans &trans   &trans   &trans   &trans    &trans
-      >;
-    };
-
-    shortcuts_layer {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  1  |  2  |   3   |   4   |   5   |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-// | CTRL |     |     |       |       |       |   |  0  |  4  |  5  |  6  |     |  TAB |
-// | SHFT |     |     |       |       |       |   |     |  1  |  2  |  3  |     |      |
-//                    |  |     |  |   |  |     |  |
-      label = "SHRTCT";
-      bindings = <
-&kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5        &kp N6  &kp N7  &kp N8  &kp N9    &kp N0 &kp BSPC
-&kp LCTRL  &none       &none       &none       &none       &none        &kp N0  &kp N4  &kp N5  &kp N6    &none &kp TAB
-&kp LSHFT  &none       &none       &none       &none      &none         &none  &kp N1  &kp N2  &kp N3    &none &none
                        &trans &trans   &trans   &trans   &trans    &trans
       >;
     };
