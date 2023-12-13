@@ -39,11 +39,12 @@
   };
 
   behaviors {
+    // https://precondition.github.io/home-row-mods
     hm: homerow_mods {
       compatible = "zmk,behavior-hold-tap";
       label = "HOMEROW_MODS";
       #binding-cells = <2>;
-      tapping-term-ms = <150>; // TODO: Test with 200 (is it too slow ?)
+      tapping-term-ms = <175>; // Sweet spot between 150 and 220
       quick_tap_ms = <0>;
       flavor = "tap-preferred";
       bindings = <&kp>, <&kp>;
