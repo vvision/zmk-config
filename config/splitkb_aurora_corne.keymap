@@ -69,6 +69,13 @@
       tapping-term-ms = <200>;
       bindings = <&kp STAR>, <&kp SLASH>;
     };
+    PLUS_MINUS: tap_dance_3 {
+          compatible = "zmk,behavior-tap-dance";
+          label = "NEXT_PREV";
+          #binding-cells = <0>;
+          tapping-term-ms = <200>;
+          bindings = <&kp PLUS>, <&kp MINUS>;
+        };
   };
 
   keymap {
@@ -107,15 +114,15 @@
 
     number_layer {
 // -----------------------------------------------------------------------------------------
-// |  |        |       |      |      |  |   | STAR_SLASH |  7  |  8  |  9  |  -  |  |
-// |  | RSHIFT | RCTRL | RALT | RGUI |  |   |  0         |  4  |  5  |  6  |  +  |  |
-// |  |        |       |      |      |  |   | COMMA_DOT  |  1  |  2  |  3  |  =  |  |
-//                             |  |  |  |   |  |  |  |
+// |  |    1   |   2   |   3  |   4  | 5 |   |     6     |  7  |  8  |  9  |  STAR_SLASH  |  |
+// |  | RSHIFT | RCTRL | RALT | RGUI |   |   |     0     |  4  |  5  |  6  | PLUS_MINUS |  |
+// |  |        |       |      |      |   |   | COMMA_DOT |  1  |  2  |  3  |     =      |  |
+//                              |  |  |  |   |  |  |  |
       label = "NUMBER";
       bindings = <
-&none  &none      &none      &none    &none    &none        &STAR_SLASH &kp N7  &kp N8  &kp N9  &kp MINUS &none
-&none  &kp RSHIFT &kp  RCTRL &kp RALT &kp RGUI &none        &kp N0      &kp N4  &kp N5  &kp N6  &kp PLUS  &none
-&none  &none      &none      &none    &none    &none        &COMMA_DOT  &kp N1  &kp N2  &kp N3  &kp EQUAL &none
+&none  &kp N1     &kp N2     &kp N3   &kp N4   &kp N5       &kp N6      &kp N7  &kp N8  &kp N9  &STAR_SLASH &none
+&none  &kp RSHIFT &kp  RCTRL &kp RALT &kp RGUI &none        &kp N0      &kp N4  &kp N5  &kp N6  &PLUS_MINUS &none
+&none  &none      &none      &none    &none    &none        &COMMA_DOT  &kp N1  &kp N2  &kp N3  &kp EQUAL   &none
                        &trans &trans   &trans   &trans   &trans    &trans
       >;
     };
