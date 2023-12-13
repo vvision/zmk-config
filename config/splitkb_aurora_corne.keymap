@@ -13,43 +13,29 @@
 #include "../src/corne.dtsi"
 
 /* LAYERS */
-#define BASE  0
-#define SYM   1
-#define NUM   2
-#define MEDIA 3
-#define MOUSE 4
-#define NAV   5
-#define FUNC  6
-#define ADJUST   7
+#define BASE       0
+#define SYM        1
+#define NUM        2
+#define CONTROL    3
+#define FUNC       4
+#define SHORTCUTS  5
+#define ADJUST     6
 
 /* MACROS */
-// #define MUTE LG(LS(M)) // For Teams (Should be tested)
+#define WIN_TEAMS_MUTE LC(LS(M)) // Windows - Teams - Toggle Mute (Should be tested) // Ctrl + Shift + M
+#define WIN_SCR LG(LS(S)) // Windows - Screenshot // Win + Shift + S
 
 / {
-  /*
-  combos {
-    compatible = "zmk,combos";
-    combo_esc {
-      timeout-ms = <50>;
-      // Hold both 1.5U thumb keys
-      key-positions = <39 40>;
-      bindings = <&mo SHORTCUTS>;
-    };
-  };
-  */
-
   conditional_layers {
     compatible = "zmk,conditional-layers";
-    adjust_layer {
-      if-layers = <NUM SYM>;
-      then-layer = <ADJUST>;
-    };
-    /*
     shortcuts_layer {
-      if-layers = <MEDIA FUNC>;
+      if-layers = <CONTROL SYM>;
       then-layer = <SHORTCUTS>;
     };
-    */
+    adjust_layer {
+      if-layers = <NUM FUNC>;
+      then-layer = <ADJUST>;
+    };
   };
 
   behaviors {
@@ -57,10 +43,31 @@
       compatible = "zmk,behavior-hold-tap";
       label = "HOMEROW_MODS";
       #binding-cells = <2>;
-      tapping-term-ms = <150>;
+      tapping-term-ms = <150>; // TODO: Test with 200 (is it too slow ?)
       quick_tap_ms = <0>;
       flavor = "tap-preferred";
       bindings = <&kp>, <&kp>;
+    };
+    NEXT_PREV: tap_dance_0 {
+      compatible = "zmk,behavior-tap-dance";
+      label = "NEXT_PREV";
+      #binding-cells = <0>;
+      tapping-term-ms = <200>;
+      bindings = <&kp C_NEXT>, <&kp C_PREV>;
+    };
+    COMMA_DOT: tap_dance_0 {
+      compatible = "zmk,behavior-tap-dance";
+      label = "NEXT_PREV";
+      #binding-cells = <0>;
+      tapping-term-ms = <200>;
+      bindings = <&kp COMMA>, <&kp DOT>;
+    };
+    STAR_SLASH: tap_dance_0 {
+      compatible = "zmk,behavior-tap-dance";
+      label = "NEXT_PREV";
+      #binding-cells = <0>;
+      tapping-term-ms = <200>;
+      bindings = <&kp STAR>, <&kp SLASH>;
     };
   };
 
@@ -72,105 +79,59 @@
 // |  | Q         | W         | E          |  R          |  T  |   |  Y  | U           |  I         |  O        |  P        |  |
 // |  | A -> LGUI | S -> LALT | D -> LCTRL | F -> LSHIFT |  G  |   |  H  | J -> RSHIFT | K -> RCTRL | L -> RALT | ; -> RGUI |  |
 // |  | Z         | X         | C          |  V          |  B  |   |  N  | M           |  ,         |  .        |  /        |  |
-//                      | ESC -> MEDIA | TAB -> NAV | SPC -> NUM |   | ENT -> SYM | BSPC -> MOUSE | DEL -> FUNC |
+//                      | ESC | TAB -> NUM | SPC -> CONTROL  |   | ENT -> SYM | BSPC -> FUNC | DEL |
 //
       label = "QWERTY";
       bindings = <
 &none &kp Q       &kp W       &kp E       &kp R         &kp T   &kp Y &kp U         &kp I       &kp O       &kp P         &none
 &none &hm LGUI A  &hm LALT S  &hm LCTRL D &hm LSHIFT F  &kp G   &kp H &hm RSHIFT J  &hm RCTRL K &hm RALT L  &hm RGUI SEMI &none
 &none &kp Z       &kp X       &kp C       &kp V         &kp B   &kp N &kp M         &kp COMMA   &kp DOT     &kp FSLH      &none
-                &lt MEDIA ESC &lt NAV TAB  &lt NUM SPACE   &lt SYM RET &lt MOUSE BSPC  &lt FUNC DEL
+                &kp ESC &lt NUM TAB  &lt CONTROL SPACE   &lt SYM RET &lt FUNC BSPC  &kp DEL
       >;
     };
 
     symbol_layer {
 // -----------------------------------------------------------------------------------------
-// |  |  ~  |  @  |  {  |  }  | "|" |   |  ^  |  _  |  +  |  /  | CAPS_WORD |  |
-// |  |  # -> LGUI  |  $ -> LALT  |  ( -> LCTRL  |  ) -> LSHIFT |  `  |   |  /  |  - -> RSHIFT |  = -> RCTRL |  * -> RALT |     : -> RGUI    |  |
-// |  |  %  |  ^  |  [  |  ]  |  !  |   |  &  |  ?  |  <  |  >  |     \     |  |
-//                         |  |  |  |   |  |  |  |
+// |  |  ~        |  @        | {          |  }          | "|" |   |  ^  |  _          |  +         |  /        | CAPS_WORD |  |
+// |  | # -> LGUI | $ -> LALT | ( -> LCTRL | ) -> LSHIFT |  `  |   |  /  | - -> RSHIFT | = -> RCTRL | * -> RALT | : -> RGUI |  |
+// |  |  %        |  ^        |  [         |  ]          |  !  |   |  &  |  ?          |  <         |  >        |     \     |  |
+//                                                    |  |  |  |   |  |  |  |
       label = "SYMBOL";
       bindings = <
-&none &kp TILDE  &kp AT    &kp LBRC &kp RBRC  &kp PIPE     &kp CARET &kp UNDER &kp PLUS  &kp SLASH &caps_word  &none
-&none &hm LGUI HASH  &hm LALT DLLR  &hm LCTRL LPAR &hm LSHIFT RPAR  &kp GRAVE    &kp SLASH &hm RSHIFT MINUS &hm RCTRL EQUAL &hm RALT STAR  &hm RGUI COLON     &none
-&none &kp PRCNT &kp CARET &kp LBKT &kp RBKT  &kp EXCL    &kp AMPS  &kp QMARK &kp LT    &kp GT    &kp BACKSLASH &none
+&none &kp TILDE     &kp AT        &kp LBRC       &kp RBRC         &kp PIPE      &kp CARET &kp UNDER        &kp PLUS        &kp SLASH     &caps_word      &none
+&none &hm LGUI HASH &hm LALT DLLR &hm LCTRL LPAR &hm LSHIFT RPAR  &kp GRAVE     &kp SLASH &hm RSHIFT MINUS &hm RCTRL EQUAL &hm RALT STAR &hm RGUI COLON  &none
+&none &kp PRCNT     &kp CARET     &kp LBKT       &kp RBKT         &kp EXCL      &kp AMPS  &kp QMARK        &kp LT          &kp GT        &kp BACKSLASH   &none
                        &trans &trans   &trans   &trans   &trans    &trans
       >;
     };
 
     number_layer {
 // -----------------------------------------------------------------------------------------
-// |  |  1  |  2  |   3   |   4   |   5   |   |  6  |  7  |  8  |  9  |  0  |  |
-// |  |     |     |       |       |       |   |  0  |  4  |  5  |  6  |     |   |
-// |  |     |     |       |       |       |   |     |  1  |  2  |  3  |     |      |
-//                    |  |     |  |   |  |     |  |
-      label = "SHRTCT";
-      bindings = <
-&none    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5        &kp N6  &kp N7  &kp N8  &kp N9    &kp N0 &none
-&none  &none       &none       &none       &none       &none        &kp N0  &kp N4  &kp N5  &kp N6    &none &none
-&none  &none       &none       &none       &none      &none         &none  &kp N1  &kp N2  &kp N3    &none &none
-                       &trans &trans   &trans   &trans   &trans    &trans
-      >;
-    };
-
-    number_layer {
-// -----------------------------------------------------------------------------------------
-// |  | [ | 7 | 8 | 9 | ] |   |  |        |       |      |      |  |
-// |  | ' | 4 | 5 | 6 | = |   |  | RSHIFT | RCTRL | RALT | RGUI |  |
-// |  | ` | 1 | 2 | 3 | \ |   |  |        |       |      |      |  |
-//            | . | 0 -> NAV | - |   |  |        |       |
+// |  |        |       |      |      |  |   | STAR_SLASH |  7  |  8  |  9  |  -  |  |
+// |  | RSHIFT | RCTRL | RALT | RGUI |  |   |  0         |  4  |  5  |  6  |  +  |  |
+// |  |        |       |      |      |  |   | COMMA_DOT  |  1  |  2  |  3  |  =  |  |
+//                             |  |  |  |   |  |  |  |
       label = "NUMBER";
       bindings = <
-&none &kp LBKT  &kp N7 &kp N8  &kp N9 &kp RBKT        &none &none      &none      &none    &none    &none
-&none &kp SQT  &kp N4 &kp N5  &kp N6 &kp EQUAL       &none &kp RSHIFT &kp  RCTRL &kp RALT &kp RGUI &none
-&none &kp GRAVE &kp N1 &kp N2  &kp N3 &kp BACKSLASH   &none &none      &none      &none    &none    &none
-                       &kp DOT &lt NAV N0 &kp MINUS       &trans &trans &trans
+&none  &none      &none      &none    &none    &none        &STAR_SLASH &kp N7  &kp N8  &kp N9  &kp MINUS &none
+&none  &kp RSHIFT &kp  RCTRL &kp RALT &kp RGUI &none        &kp N0      &kp N4  &kp N5  &kp N6  &kp PLUS  &none
+&none  &none      &none      &none    &none    &none        &COMMA_DOT  &kp N1  &kp N2  &kp N3  &kp EQUAL &none
+                       &trans &trans   &trans   &trans   &trans    &trans
       >;
     };
 
-    adjust_layer {
+    control_layer {
 // -----------------------------------------------------------------------------------------
-// |  |      |      |       | OUT_TOG | EP toggle |   | BT0 |     BT1       |   BT2    |   BT3    |  BT4    |  |
-// |  | LGUI | LALT | LCTRL | LSHIFT  |           |   |     | Prev       | Vol - | Vol + | Next |  |
-// |  |      |      |       |         |           |   |     |         |    |    |   |  |
-//                                       |  |  |  |   | STOP      | Play/Pause | K_MUTE -> FUNC |
-      label = "MEDIA";
+// |  |      |      | CAPSLOCK |   "    | ^ |   | Redo | Paste | Copy  | Cut   | Undo |  |
+// |  | LGUI | LALT | LCTRL    | LSHIFT | ' |   | Left | Down  | Up    | Right |      |  |
+// |  |      |      |          |        | ` |   | Home | PG_DN | PG_UP | END   |      |  |
+//                                 |  |  |  |   |  |  |  |
+      label = "CONTRL";
       bindings = <
-&none &none    &none    &none     &u_out_tog &u_ep_tog &u_bt_sel_0  &u_bt_sel_1 &u_bt_sel_2 &u_bt_sel_3  &u_bt_sel_4     &none
-&none &kp LGUI &kp LALT &kp LCTRL &kp LSHIFT &none     &none        &kp C_PREV   &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT   &none
-&none &none    &none    &none     &none      &none     &none        &none &none &none &none &none
-                              &trans &trans   &trans   &kp C_STOP   &kp C_PP    &lt FUNC K_MUTE
-      >;
-    };
-
-    mouse_layer {
-// Waiting for mouse support in ZMK
-// -----------------------------------------------------------------------------------------
-// |  |      |      |       |        |    |   | Redo     | Paste | Copy  | Cut   | Undo |  |
-// |  | LGUI | LALT | LCTRL | LSHIFT |    |   | ' |    |    |     |   |  |
-// |  |      |      |       |        |    |   | `  |   |  |  |   |  |
-//                               |  |  |  |   | Right | Left | Middle |
-      label = "MOUSE";
-      bindings = <
-&none &trans   &trans   &trans    &trans     &trans    &kp K_REDO &kp K_PASTE &kp K_COPY &kp K_CUT &kp K_UNDO &none
-&none &kp LGUI &kp LALT &kp LCTRL &kp LSHIFT &trans    &kp SQT    &trans    &trans   &trans    &trans  &none
-&none &trans   &trans   &trans    &trans     &trans    &kp GRAVE  &trans    &trans &trans &trans    &none
-                              &trans &trans    &trans    &trans   &trans    &trans
-      >;
-    };
-
-    navigation_layer {
-// -----------------------------------------------------------------------------------------
-// |  |      |      |       |        |    |   | Redo     | Paste | Copy  | Cut   | Undo |  |
-// |  | LGUI | LALT | LCTRL | LSHIFT |    |   | CAPSLOCK | LFT   | DWN   | UP    | RGT  |  |
-// |  |      |      |       |        |    |   | Insert   | Home  | PG_DN | PG_UP | END  |  |
-//                               |  |  |  |   | ENT | BSPC -> NUM | DEL |
-      label = "NAV";
-      bindings = <
-&none &trans   &trans   &trans    &trans     &trans    &kp K_REDO   &kp K_PASTE &kp K_COPY &kp K_CUT &kp K_UNDO &none
-&none &kp LGUI &kp LALT &kp LCTRL &kp LSHIFT &trans    &u_caps_word &kp LEFT    &kp DOWN   &kp UP    &kp RIGHT  &none
-&none &trans   &trans   &trans    &trans     &trans    &kp INS      &kp HOME    &kp PG_DN  &kp PG_UP &kp END    &none
-                              &trans &trans    &trans    &kp RET   &lt NUM BSPC    &kp DEL
+&none &none    &none    &u_caps_word  &kp DOUBLE_QUOTES  &kp CARET     &kp K_REDO  &kp K_PASTE &kp K_COPY  &kp K_CUT   &kp K_UNDO  &none
+&none &kp LGUI &kp LALT &kp LCTRL     &kp LSHIFT         &kp SQT       &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &none       &none
+&none &none    &none    &none         &none              &kp GRAVE     &kp HOME    &kp PG_DN   &kp PG_UP   &kp END     &none       &none
+                                           &trans &trans &trans        &trans &trans &trans
       >;
     };
 
@@ -179,28 +140,43 @@
 // |  | F12 | F7 | F8 | F9 |  |   |  |        |       |      |      |  |
 // |  | F11 | F4 | F5 | F6 |  |   |  | RSHIFT | RCTRL | RALT | RGUI |  |
 // |  | F10 | F1 | F2 | F3 |  |   |  |        |       |      |      |  |
-//     | K_APP -> MEDIA | SPACE | TAB  |   |  |        |       |
-      label = "FUNCTION";
+//              | K_APP |  |  |   |  |        |       |
+      label = "FUNCTN";
       bindings = <
 &none &kp F12 &kp F7 &kp F8 &kp F9 &none       &none &none      &none      &none    &none    &none
 &none &kp F11 &kp F4 &kp F5 &kp F6 &none       &none &kp RSHIFT &kp  RCTRL &kp RALT &kp RGUI &none
 &none &kp F10 &kp F1 &kp F2 &kp F3 &none       &none &none      &none      &none    &none    &none
-                       &lt MEDIA K_APP &kp SPACE &kp TAB           &trans &trans &trans
+                       &kp K_APP &trans &trans           &trans &trans &trans
       >;
     };
 
-    adjust_layer_TODELETE {
+    shortcuts_layer {
 // -----------------------------------------------------------------------------------------
-// | OUT_BLE |  F1  |  F2  | F3    | F4    |  F5        |   |  F6 |  F7 |  F8 |  F9 |  F10 | OUT_USB |
-// | K_MUTE  | Prev | Next | Vol - | Vol + | Play/Pause |   |     |     |     |     |      |         |
-// | BTCLR   | BT1  | BT2  | BT3   | BT4   | BT5        |   |     |     |     |     |      |         |
-//                    |  |     |  |   |  |     |  |
+// |  |  |  |         |                |  |   |      |            |       |       |           |  |
+// |  |  |  | WIN_SCR | WIN_TEAMS_MUTE |  |   | Mute | Play/Pause | Vol - | Vol + | Prev/Next |  |
+// |  |  |  |         |                |  |   |      |            |       |       |           |  |
+//                               |  |  |  |   |  |  |  |
+      label = "SHRTCT";
+      bindings = <
+&none &none &none &none       &none               &none     &none       &none             &none         &none         &none       &none
+&none &none &none &kp WIN_SCR &kp WIN_TEAMS_MUTE  &none     &kp K_MUTE  &kp C_PLAY_PAUSE  &kp C_VOL_DN  &kp C_VOL_UP  &NEXT_PREV  &none
+&none &none &none &none       &none               &none     &none       &none             &none         &none         &none       &none
+                              &trans &trans   &trans   &trans   &trans    &trans
+      >;
+    };
+
+    adjust_layer {
+// -----------------------------------------------------------------------------------------
+// |  |      |      |       | OUT_TOG | EP toggle |   | BT0 | BT1 | BT2 | BT3 | BT4 |  |
+// |  | LGUI | LALT | LCTRL | LSHIFT  |           |   |     |     |     |     |     |  |
+// |  |      |      |       |         |           |   |     |     |     |     |     |  |
+//                                       |  |  |  |   |  |  |  |
       label = "ADJUST";
       bindings = <
-&out OUT_BLE &kp F1        &kp F2          &kp F3          &kp F4          &kp F5          &kp F6  &kp F7  &kp F8 &kp F9   &kp F10 &out OUT_USB
-&kp K_MUTE   &kp C_PREV    &kp C_NEXT      &kp C_VOL_DN    &kp C_VOL_UP    &kp C_PP        &none  &none  &none &none   &none &none
-&bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4    &none  &none  &none &none   &none &none
-                       &trans &trans   &trans   &trans   &trans    &trans
+&none &none    &none    &none     &u_out_tog &u_ep_tog &u_bt_sel_0  &u_bt_sel_1 &u_bt_sel_2 &u_bt_sel_3  &u_bt_sel_4  &none
+&none &kp LGUI &kp LALT &kp LCTRL &kp LSHIFT &none     &none        &none       &none       &none        &none        &none
+&none &none    &none    &none     &none      &none     &none        &none       &none       &none        &none        &none
+                              &trans &trans   &trans   &trans   &trans    &trans
       >;
     };
   };
