@@ -55,14 +55,14 @@
       tapping-term-ms = <200>;
       bindings = <&kp C_NEXT>, <&kp C_PREV>;
     };
-    COMMA_DOT: tap_dance_0 {
+    COMMA_DOT: tap_dance_1 {
       compatible = "zmk,behavior-tap-dance";
       label = "NEXT_PREV";
       #binding-cells = <0>;
       tapping-term-ms = <200>;
       bindings = <&kp COMMA>, <&kp DOT>;
     };
-    STAR_SLASH: tap_dance_0 {
+    STAR_SLASH: tap_dance_2 {
       compatible = "zmk,behavior-tap-dance";
       label = "NEXT_PREV";
       #binding-cells = <0>;
