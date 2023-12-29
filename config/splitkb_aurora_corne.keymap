@@ -145,16 +145,16 @@
 
     function_layer {
 // -----------------------------------------------------------------------------------------
-// |  | F12 | F7 | F8 | F9 |  |   |  |        |       |      |      |  |
-// |  | F11 | F4 | F5 | F6 |  |   |  | RSHIFT | RCTRL | RALT | RGUI |  |
-// |  | F10 | F1 | F2 | F3 |  |   |  |        |       |      |      |  |
-//              | K_APP |  |  |   |  |        |       |
+// |  | F12 | F7 | F8 | F9 |       |   |  |        |       |      |      |  |
+// |  | F11 | F4 | F5 | F6 |       |   |  | RSHIFT | RCTRL | RALT | RGUI |  |
+// |  | F10 | F1 | F2 | F3 | K_APP |   |  |        |       |      |      |  |
+//                        |  |  |  |   |  |        |       |
       label = "FUNCTN";
       bindings = <
 &none &kp F12 &kp F7 &kp F8 &kp F9 &none       &none &none      &none      &none    &none    &none
 &none &kp F11 &kp F4 &kp F5 &kp F6 &none       &none &kp RSHIFT &kp  RCTRL &kp RALT &kp RGUI &none
-&none &kp F10 &kp F1 &kp F2 &kp F3 &none       &none &none      &none      &none    &none    &none
-                       &kp K_APP &trans &trans           &trans &trans &trans
+&none &kp F10 &kp F1 &kp F2 &kp F3 &kp K_APP   &none &none      &none      &none    &none    &none
+                       &trans &trans &trans    &trans &trans &trans
       >;
     };
 
