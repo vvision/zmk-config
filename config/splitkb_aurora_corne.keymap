@@ -130,15 +130,15 @@
 
     control_layer {
 // -----------------------------------------------------------------------------------------
-// |  |      |      | CAPSLOCK |   "    | ^ |   | Redo | Paste | Copy  | Cut   | Undo |  |
-// |  | LGUI | LALT | LCTRL    | LSHIFT | ' |   | Left | Down  | Up    | Right |      |  |
-// |  |      |      |          |        | ` |   | Home | PG_DN | PG_UP | END   |      |  |
-//                                 |  |  |  |   |  | DEL -> FUNC |  |
+// |  |      |      | CAPSLOCK |   "         | ^ |   | Redo | Paste | Copy  | Cut   | Undo |  |
+// |  | LGUI | LALT | LCTRL    | ' -> LSHIFT | ' |   | Left | Down  | Up    | Right |      |  |
+// |  |      |      |          |    `        | ` |   | Home | PG_DN | PG_UP | END   |      |  |
+//                                      |  |  |  |   |  | DEL -> FUNC |  |
       label = "CONTRL";
       bindings = <
 &none &none    &none    &u_caps_word  &kp DOUBLE_QUOTES  &kp CARET     &kp K_REDO  &kp K_PASTE &kp K_COPY  &kp K_CUT   &kp K_UNDO  &none
-&none &kp LGUI &kp LALT &kp LCTRL     &kp LSHIFT         &kp SQT       &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &none       &none
-&none &none    &none    &none         &none              &kp GRAVE     &kp HOME    &kp PG_DN   &kp PG_UP   &kp END     &none       &none
+&none &kp LGUI &kp LALT &kp LCTRL     &hm LSHIFT SQT         &kp SQT       &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &none       &none
+&none &none    &none    &none         &kp GRAVE              &kp GRAVE     &kp HOME    &kp PG_DN   &kp PG_UP   &kp END     &none       &none
                                            &trans &trans &trans        &trans &lt FUNC DEL &trans
       >;
     };
