@@ -16,7 +16,7 @@
 #define BASE       0
 #define SYM        1
 #define NUM        2
-#define CONTROL    3
+#define NAV    3
 #define FUNC       4
 #define SHORTCUTS  5
 #define ADJUST     6
@@ -29,7 +29,7 @@
   conditional_layers {
     compatible = "zmk,conditional-layers";
     shortcuts_layer {
-      if-layers = <CONTROL SYM>;
+      if-layers = <NAV SYM>;
       then-layer = <SHORTCUTS>;
     };
     adjust_layer {
@@ -87,14 +87,14 @@
 // |  | Q         | W         | E          |  R          |  T  |   |  Y  | U           |  I         |  O        |  P        |  |
 // |  | A -> LGUI | S -> LALT | D -> LCTRL | F -> LSHIFT |  G  |   |  H  | J -> RSHIFT | K -> RCTRL | L -> RALT | ; -> RGUI |  |
 // |  | Z         | X         | C          |  V          |  B  |   |  N  | M           |  ,         |  .        |  /        |  |
-//                      | ESC | TAB -> NUM | SPC -> CONTROL  |   | ENT -> SYM | BSPC -> FUNC | DEL |
+//                      | ESC | TAB -> NUM | SPC -> NAV  |   | ENT -> SYM | BSPC -> FUNC | DEL |
 //
       label = "QWERTY";
       bindings = <
 &none &kp Q       &kp W       &kp E       &kp R         &kp T   &kp Y &kp U         &kp I       &kp O       &kp P         &none
 &none &hm LGUI A  &hm LALT S  &hm LCTRL D &hm LSHIFT F  &kp G   &kp H &hm RSHIFT J  &hm RCTRL K &hm RALT L  &hm RGUI SEMI &none
 &none &kp Z       &kp X       &kp C       &kp V         &kp B   &kp N &kp M         &kp COMMA   &kp DOT     &kp FSLH      &none
-                &kp ESC &lt NUM TAB  &lt CONTROL SPACE   &lt SYM RET &lt FUNC BSPC  &kp DEL
+                &kp ESC &lt NUM TAB  &lt NAV SPACE   &lt SYM RET &lt FUNC BSPC  &kp DEL
       >;
     };
 
@@ -128,13 +128,13 @@
       >;
     };
 
-    control_layer {
+    navigation_layer {
 // -----------------------------------------------------------------------------------------
 // |  |      |      | CAPSLOCK |   "         | ^ |   | Redo | Paste | Copy  | Cut   | Undo |  |
 // |  | LGUI | LALT | LCTRL    | ' -> LSHIFT | ' |   | Left | Down  | Up    | Right |      |  |
 // |  |      |      |          |    `        | ` |   | Home | PG_DN | PG_UP | END   |      |  |
 //                                      |  |  |  |   |  | DEL -> FUNC |  |
-      label = "CONTRL";
+      label = "NAV";
       bindings = <
 &none &none    &none    &u_caps_word  &kp DOUBLE_QUOTES  &kp CARET     &kp K_REDO  &kp K_PASTE &kp K_COPY  &kp K_CUT   &kp K_UNDO  &none
 &none &kp LGUI &kp LALT &kp LCTRL     &hm LSHIFT SQT         &kp SQT       &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &none       &none
