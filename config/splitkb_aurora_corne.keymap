@@ -38,6 +38,23 @@
     };
   };
 
+  combos {
+    compatible = "zmk,combos";
+    combo_sqt {
+        timeout-ms = <50>;
+        // Hold K and L (in qwerty)
+        key-positions = <20 21>;
+        bindings = <&kp SQT>;
+    };
+
+    combo_grave {
+        timeout-ms = <50>;
+        // Hold S and D (in qwerty)
+        key-positions = <14 15>;
+        bindings = <&kp GRAVE>;
+    };
+  };
+
   behaviors {
     // https://precondition.github.io/home-row-mods
     hm: homerow_mods {
