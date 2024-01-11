@@ -45,7 +45,7 @@
         // Hold K and L (in qwerty)
         key-positions = <20 21>;
         bindings = <&kp SQT>;
-        layers = < 0 >
+        layers = < 0 >;
     };
 
     combo_grave {
@@ -53,7 +53,7 @@
         // Hold S and D (in qwerty)
         key-positions = <14 15>;
         bindings = <&kp GRAVE>;
-        layers = < 0 >
+        layers = < 0 >;
     };
   };
 
