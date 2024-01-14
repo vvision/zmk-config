@@ -120,7 +120,7 @@
      * Example:
      *  `&lt a`
      */
-    lt: lt {
+    lq: lq {
         // ...
         compatible = "zmk,behavior-macro-one-param";
         #binding-cells = <1>;
