@@ -3,3 +3,4 @@
 #include "corne.h"
 
 #include "shift_functions.dtsi"
+#include "diacritics.dtsi"
