@@ -17,4 +17,4 @@
 };
 
 #include "shift_functions.h"
-// #include "diacritics.h"
+#include "diacritics.h"

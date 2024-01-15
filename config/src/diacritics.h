@@ -35,8 +35,9 @@
 };
 
 #define GO_SHIFT_LETTER_ACUTE(name, binding) \
-LETTER_ACUTE(name ## _acute, binding) \
-SHIFT_LETTER_ACUTE(name, &name ## _acute, )
+SHIFT_LETTER_ACUTE(name ## _shifted, binding) \
+LETTER_ACUTE(name, &name ## _shifted)
 
 
-GO_SHIFT_LETTER_ACUTE(fr_e_acute, &kp e)
+
+GO_SHIFT_LETTER_ACUTE(fr_e_acute_test, &kp E)
