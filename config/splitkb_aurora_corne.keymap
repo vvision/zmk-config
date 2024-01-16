@@ -225,8 +225,8 @@
       label = "ACCENTS";
       bindings = <
 &none  &none      &none      &none     &none      &none        &none  &none      &none      &none     &none      &none
-&none  &none      &none      &none     &none      &none        &none  &none      &none      &none     &none      &none
-&none  &none      &none      &none     &none      &none        &none  &none      &none      &none     &none      &none
+&none  &none      &none      &none     &none      &none        &none  &kp RSHIFT      &none      &none     &none      &none
+&none  &none      &none      &none     &acute_test      &fr_e_acute_test_2        &none  &none      &none      &none     &none      &none
                        &trans &trans &trans   &trans &trans &trans
       >;
     };
