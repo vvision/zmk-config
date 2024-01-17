@@ -10,8 +10,8 @@
         macros { \
             name: name { \
                 compatible = "zmk,behavior-macro"; \
-                wait-ms = <40>; \
-                tap-ms = <40>; \
+                wait-ms = <0>; \
+                tap-ms = <0>; \
                 #binding-cells = <0>; \
                 bindings = <diacritic_binding>, <letter_binding>; \
             }; \
