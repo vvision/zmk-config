@@ -24,14 +24,14 @@
 #define WIN_TEAMS_MUTE LC(LS(M)) // Windows - Teams - Toggle Mute (Should be tested) // Ctrl + Shift + M
 #define WIN_SCR LG(LS(S)) // Windows - Screenshot // Win + Shift + S
 
-// https://precondition.github.io/home-row-mods
-HOLD_TAP(hm, 175, &kp, &kp)
-HOLD_TAP_CUSTOM(hm_fr_u_circumflex, 175, &kp, &fr_u_circumflex)
+/* https://precondition.github.io/home-row-mods */
+HOLD_TAP(hm, 2, 175, &kp, &kp)
+HOLD_TAP(hm_fr_u_circumflex, 2, 175, &kp, &fr_u_circumflex)
 
-// Hold K and L for ' (in qwerty)
-COMBO(combo_ql_sqt, 20 21, &kp SQT, 0)
-// Hold S and D for ` (in qwerty)
-COMBO(combo_sd_grave, 14 15, &kp GRAVE, 0)
+/* Hold K and L for ' (in qwerty) */
+// COMBO(combo_ql_sqt, 20 21, &kp SQT, 0)
+/* Hold S and D for ` (in qwerty) */
+// COMBO(combo_sd_grave, 14 15, &kp GRAVE, 0)
 
 / {
   conditional_layers {
