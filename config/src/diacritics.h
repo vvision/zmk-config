@@ -1,9 +1,6 @@
 #pragma once
 
-#include "shift_functions.h"
-
 // Inspired by: https://github.com/urob/zmk-nodefree-config/blob/main/helper.h
-#define ZMK_HELPER_STRINGIFY(x) #x
 
 #define LETTER_ACUTE(name, diacritic_binding, letter_binding) \
     / { \
@@ -30,14 +27,23 @@
         }; \
     };
 
-// SHIFT_LETTER_ACUTE(shift_test, &kp E, &kp LS(E))
-LETTER_ACUTE(acute_test, &kp SINGLE_QUOTE, &kp E)
-
-// GO_SHIFT_LETTER_ACUTE(fr_e_acute_test, SINGLE_QUOTE, E)
-
-#define GO_SHIFT_LETTER_ACUTE_2(name, diacritic_binding, letter_binding) \
+#define DIACRITIC_LETTER(name, diacritic_binding, letter_binding) \
     LETTER_ACUTE(name ## _acute_lower, &kp diacritic_binding, &kp letter_binding) \
     LETTER_ACUTE(name ## _acute_upper, &kp diacritic_binding, &kp LSHIFT &kp letter_binding) \
     SHIFT_LETTER_ACUTE(name, &name ## _acute_lower, &name ## _acute_upper)
 
-GO_SHIFT_LETTER_ACUTE_2(fr_e_acute_test_2, SINGLE_QUOTE, E)
+DIACRITIC_LETTER(fr_a_grave, GRAVE, A)
+DIACRITIC_LETTER(fr_a_circumflex, CARET, A)
+
+DIACRITIC_LETTER(fr_e_acute, SINGLE_QUOTE, E)
+DIACRITIC_LETTER(fr_e_grave, GRAVE, E)
+DIACRITIC_LETTER(fr_e_circumflex, CARET, E)
+
+DIACRITIC_LETTER(fr_i_circumflex, CARET, I)
+
+DIACRITIC_LETTER(fr_o_circumflex, CARET, O)
+
+DIACRITIC_LETTER(fr_u_grave, GRAVE, U)
+DIACRITIC_LETTER(fr_u_circumflex, CARET, U)
+
+DIACRITIC_LETTER(fr_c_cedilla, SINGLE_QUOTE, C)
