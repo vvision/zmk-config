@@ -36,9 +36,9 @@
 */
 #define COMBO(name, key_positions, bindings, layers) \
     \ { \
-        timeout-ms = <50>;
-        // Hold K and L (in qwerty)
-        key-positions = <key_positions>;
-        bindings = <bindings>;
-        layers = <layers>;
+        compatible = "zmk,combos"; \
+        timeout-ms = <50>; \
+        key-positions = <key_positions>; \
+        bindings = <bindings>; \
+        layers = <layers>; \
     };

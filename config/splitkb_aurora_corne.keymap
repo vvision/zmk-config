@@ -28,31 +28,17 @@
 HOLD_TAP(hm, 175, &kp, &kp)
 HOLD_TAP_CUSTOM(hm_fr_u_circumflex, 175, &kp, &fr_u_circumflex)
 
+// Hold K and L for ' (in qwerty)
+COMBO(combo_ql_sqt, 20 21, &kp SQT, 0)
+// Hold S and D for ` (in qwerty)
+COMBO(combo_sd_grave, 14 15, &kp GRAVE, 0)
+
 / {
   conditional_layers {
     compatible = "zmk,conditional-layers";
     adjust_layer {
       if-layers = <NAV SYM>;
       then-layer = <ADJUST>;
-    };
-  };
-
-  combos {
-    compatible = "zmk,combos";
-    combo_sqt {
-        timeout-ms = <50>;
-        // Hold K and L (in qwerty)
-        key-positions = <20 21>;
-        bindings = <&kp SQT>;
-        layers = < 0 >;
-    };
-
-    combo_grave {
-        timeout-ms = <50>;
-        // Hold S and D (in qwerty)
-        key-positions = <14 15>;
-        bindings = <&kp GRAVE>;
-        layers = < 0 >;
     };
   };
 
