@@ -1,1 +1,17 @@
+#include "diacritics.h"
 
+DIACRITIC_LETTER(fr_a_grave, GRAVE, A)
+DIACRITIC_LETTER(fr_a_circumflex, CARET, A)
+
+DIACRITIC_LETTER(fr_e_acute, SINGLE_QUOTE, E)
+DIACRITIC_LETTER(fr_e_grave, GRAVE, E)
+DIACRITIC_LETTER(fr_e_circumflex, CARET, E)
+
+DIACRITIC_LETTER(fr_i_circumflex, CARET, I)
+
+DIACRITIC_LETTER(fr_o_circumflex, CARET, O)
+
+DIACRITIC_LETTER(fr_u_grave, GRAVE, U)
+DIACRITIC_LETTER(fr_u_circumflex, CARET, U)
+
+DIACRITIC_LETTER(fr_c_cedilla, SINGLE_QUOTE, C)

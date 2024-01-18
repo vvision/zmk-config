@@ -31,19 +31,3 @@
     LETTER_ACUTE(name ## _acute_lower, &kp diacritic_binding, &kp letter_binding) \
     LETTER_ACUTE(name ## _acute_upper, &kp diacritic_binding, &kp LSHIFT &kp letter_binding) \
     SHIFT_LETTER_ACUTE(name, &name ## _acute_lower, &name ## _acute_upper)
-
-DIACRITIC_LETTER(fr_a_grave, GRAVE, A)
-DIACRITIC_LETTER(fr_a_circumflex, CARET, A)
-
-DIACRITIC_LETTER(fr_e_acute, SINGLE_QUOTE, E)
-DIACRITIC_LETTER(fr_e_grave, GRAVE, E)
-DIACRITIC_LETTER(fr_e_circumflex, CARET, E)
-
-DIACRITIC_LETTER(fr_i_circumflex, CARET, I)
-
-DIACRITIC_LETTER(fr_o_circumflex, CARET, O)
-
-DIACRITIC_LETTER(fr_u_grave, GRAVE, U)
-DIACRITIC_LETTER(fr_u_circumflex, CARET, U)
-
-DIACRITIC_LETTER(fr_c_cedilla, SINGLE_QUOTE, C)

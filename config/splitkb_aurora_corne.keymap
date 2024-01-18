@@ -52,116 +52,6 @@
     };
   };
 
-
-    macros {
-
-      /**
-       * Accentuated letter when using international US layout
-       *
-       * Params:
-       *  1. Letter to use with an accent '
-       *
-       * Example:
-       *  `&la a`
-       */
-      la: la {
-          // ...
-          compatible = "zmk,behavior-macro-one-param";
-          wait-ms = <40>;
-          tap-ms = <40>;
-          #binding-cells = <1>;
-          bindings
-            = <&kp SINGLE_QUOTE>
-            , <&macro_param_1to1>
-            , <&kp MACRO_PLACEHOLDER>;
-      };
-
-      /**
-       * Upper accentuated letter when using international US layout
-       *
-       * Params:
-       *  1. Letter to use with an accent '
-       *
-       * Example:
-       *  `&la a`
-       */
-      lau: lau {
-          // ...
-          compatible = "zmk,behavior-macro-one-param";
-          wait-ms = <40>;
-          tap-ms = <40>;
-          #binding-cells = <1>;
-          bindings
-            = <&kp SINGLE_QUOTE>
-            , <&kp LSHIFT>
-            , <&macro_param_1to1>
-            , <&kp MACRO_PLACEHOLDER>;
-      };
-
-      /**
-       * Accentuated letter when using international US layout
-       *
-       * Params:
-       *  1. Letter to use with an accent `
-       *
-       * Example:
-       *  `&lg a`
-       */
-      lg: lg {
-          // ...
-          compatible = "zmk,behavior-macro-one-param";
-          wait-ms = <40>;
-          tap-ms = <40>;
-          #binding-cells = <1>;
-          bindings
-            = <&kp GRAVE>
-            , <&macro_param_1to1>
-            , <&kp MACRO_PLACEHOLDER>;
-      };
-
-      /**
-       * Accentuated letter when using international US layout
-       *
-       * Params:
-       *  1. Letter to use with an accent ^
-       *
-       * Example:
-       *  `&lc a`
-       */
-      lc: lc {
-          // ...
-          compatible = "zmk,behavior-macro-one-param";
-          wait-ms = <40>;
-          tap-ms = <40>;
-          #binding-cells = <1>;
-          bindings
-            = <&kp CARET>
-            , <&macro_param_1to1>
-            , <&kp MACRO_PLACEHOLDER>;
-      };
-
-      /**
-       * Accentuated letter when using international US layout
-       *
-       * Params:
-       *  1. Letter to use with an accent "
-       *
-       * Example:
-       *  `&lt a`
-       */
-      lq: lq {
-          // ...
-          compatible = "zmk,behavior-macro-one-param";
-          wait-ms = <40>;
-          tap-ms = <40>;
-          #binding-cells = <1>;
-          bindings
-            = <&kp DOUBLE_QUOTES>
-            , <&macro_param_1to1>
-            , <&kp MACRO_PLACEHOLDER>;
-      };
-    };
-
   behaviors {
     // https://precondition.github.io/home-row-mods
     hm: homerow_mods {
@@ -218,16 +108,16 @@
 
     diacritics_layer {
 // -----------------------------------------------------------------------------------------
-// |  |   | é | è |        |   |   |  |             |   |   |  |  |
-// |  | à |   | ê | LSHIFT |   |   |  | û -> RSHIFT | î | ô |  |  |
-// |  | â |   | ç |        |   |   |  |             |   |   |  |  |
-//                              |  |  |  |   |  |  |  |
+// |  |   | é | è |        |   |   |  |   |   |   |  |  |
+// |  | à |   | ê | LSHIFT |   |   |  | û | î | ô |  |  |
+// |  | â |   | ç |        |   |   |  |   |   |   |  |  |
+//                              |  |  |  |   |  | RSHIFT |  |
       label = "ACCENTS";
       bindings = <
 &none  &none            &fr_e_acute &fr_e_grave      &none      &none        &none  &none                      &fr_u_grave      &none            &none      &none
-&none  &fr_a_grave      &none       &fr_e_circumflex &kp LSHIFT &none        &none  &hm RSHIFT fr_u_circumflex &fr_i_circumflex &fr_o_circumflex &none      &none
+&none  &fr_a_grave      &none       &fr_e_circumflex &kp LSHIFT &none        &none  &fr_u_circumflex &fr_i_circumflex &fr_o_circumflex &none      &none
 &none  &fr_a_circumflex &none       &fr_c_cedilla    &none      &none        &none  &none                      &none            &none            &none      &none
-                       &trans &trans &trans   &trans &trans &trans
+                       &trans &trans &trans   &trans &kp RSHIFT &trans
       >;
     };
 
