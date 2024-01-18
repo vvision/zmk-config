@@ -1,7 +1,5 @@
 #pragma once
 
-#include <behaviors.dtsi>
-
 /**
  * Usage: HOLD_TAP(hm, 2, 175, &kp, &kp)
  * &hm LSHIFT F
@@ -27,15 +25,15 @@
 /**
  * Usage: COMBO(combo_ql_sqt, 20 21, &kp SQT, 0)
 */
-#define COMBO(name, key_positions, bindings, layers) \
+#define COMBO_KEY(name, key_positions, combo_bindings, combo_layers) \
     / { \
         combos { \
             compatible = "zmk,combos"; \
-            name: name { \
+            combo_ ## name { \
                 timeout-ms = <50>; \
                 key-positions = <key_positions>; \
-                bindings = <bindings>; \
-                layers = <layers>; \
+                bindings = <combo_bindings>; \
+                layers = <combo_layers>; \
             }; \
         }; \
     };
@@ -44,14 +42,14 @@
  * Usage: DOUBLE_TAP(dt)
  * &dt C_NEXT C_PREV
 */
-#define DOUBLE_TAP(name) \
+#define DOUBLE_TAP(name, tapping_term_ms, binding_1, binding_2) \
     / { \
         behaviors { \
             name: name { \
               compatible = "zmk,behavior-tap-dance"; \
-              #binding-cells = <2>; \
-              tapping-term-ms = <200>; \
-              bindings = <&kp>, <&kp>; \
+              #binding-cells = <0>; \
+              tapping-term-ms = <tapping_term_ms>; \
+              bindings = <binding_1>, <binding_2>; \
             }; \
         }; \
     };
