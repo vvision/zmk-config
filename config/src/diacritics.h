@@ -29,5 +29,5 @@
 
 #define DIACRITIC_LETTER(name, diacritic_binding, letter_binding) \
     LETTER_ACUTE(name ## _acute_lower, &kp diacritic_binding, &kp letter_binding) \
-    LETTER_ACUTE(name ## _acute_upper, &kp diacritic_binding, &kp LSHIFT &kp letter_binding) \
+    LETTER_ACUTE(name ## _acute_upper, &kp diacritic_binding, &kp LS(letter_binding)) \
     SHIFT_LETTER_ACUTE(name, &name ## _acute_lower, &name ## _acute_upper)
