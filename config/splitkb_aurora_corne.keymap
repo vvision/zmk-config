@@ -25,8 +25,8 @@
 #define WIN_SCR LG(LS(S)) // Windows - Screenshot // Win + Shift + S
 
 /* https://precondition.github.io/home-row-mods */
-HOLD_TAP(hm, 2, 175, &kp, &kp)
-HOLD_TAP(hm_fr_u_circumflex, 2, 175, &kp, &fr_u_circumflex)
+HOLD_TAP(hm, 175, &kp, &kp)
+HOLD_TAP(hm_fr_u_circumflex, 175, &kp, &fr_u_circumflex)
 
 /* Hold K and L for ' (in qwerty) */
 COMBO_KEY(combo_kl_sqt, 20 21, &kp SQT, BASE)
@@ -86,9 +86,9 @@ DOUBLE_TAP(next_prev, 200, &kp C_NEXT, &kp C_PREV)
 //                              |  |  |  |   |  | RSHIFT |  |
       label = "ACCENTS";
       bindings = <
-&none  &none            &fr_e_acute &fr_e_grave      &none      &none        &none  &none                            &fr_u_grave      &none            &none      &none
-&none  &fr_a_grave      &none       &fr_e_circumflex &kp LSHIFT &none        &none  &hm_fr_u_circumflex RSHIFT &fr_i_circumflex &fr_o_circumflex &none      &none
-&none  &fr_a_circumflex &none       &fr_c_cedilla    &none      &none        &none  &none                            &none            &none            &none      &none
+&none  &none            &fr_e_acute &fr_e_grave      &none      &none        &none  &none                         &fr_u_grave      &none            &none      &none
+&none  &fr_a_grave      &none       &fr_e_circumflex &kp LSHIFT &none        &none  &hm_fr_u_circumflex RSHIFT 0  &fr_i_circumflex &fr_o_circumflex &none      &none
+&none  &fr_a_circumflex &none       &fr_c_cedilla    &none      &none        &none  &none                         &none            &none            &none      &none
                        &trans &trans &trans   &trans &kp RSHIFT &trans
       >;
     };

@@ -1,19 +1,25 @@
 #pragma once
 
 /**
- * Usage: HOLD_TAP(hm, 2, 175, &kp, &kp)
+ * Usage: HOLD_TAP(hm, 175, &kp, &kp)
  * &hm LSHIFT F
- * Usage: HOLD_TAP(hmc, 1, 175, &kp, &custom_function)
- * &hmc RSHIFT
+ * Usage: HOLD_TAP(hmc, 175, &kp, &custom_function)
+ * &hmc RSHIFT 0
  *
  * tapping_term_ms: Sweet spot between 150 and 220
+ *
+ * Note:
+ *   If you use behaviors that accept no parameters such as mod-morphs or macros,
+ *   you can pass a dummy parameter value such as 0 to the hold-tap when you use it in your keymap.
+ *   Ex: &hmc RSHIFT 0
+ * (https://zmk.dev/docs/behaviors/hold-tap)
 */
-#define HOLD_TAP(name, binding_cells, tapping_term_ms, binding_function, custom_function) \
+#define HOLD_TAP(name, tapping_term_ms, binding_function, custom_function) \
     / { \
         behaviors { \
             name: name { \
               compatible = "zmk,behavior-hold-tap"; \
-              #binding-cells = <binding_cells>; \
+              #binding-cells = <2>; \
               quick_tap_ms = <0>; \
               tapping-term-ms = <tapping_term_ms>; \
               flavor = "tap-preferred"; \
