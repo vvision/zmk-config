@@ -95,13 +95,13 @@ DOUBLE_TAP(next_prev, 200, &kp C_NEXT, &kp C_PREV)
 
     navigation_layer {
 // -----------------------------------------------------------------------------------------
-// |  |      |      | CAPSLOCK |        |      |   |      |       |       |       |  |  |
-// |  | LGUI | LALT | LCTRL    | LSHIFT |      |   | Left | Down  | Up    | Right |  |  |
+// |  |      |      | CAPSLOCK |        |      |   | DEL  |  INS  |       |       |  |  |
+// |  | LGUI | LALT | LCTRL    | LSHIFT |      |   | Left | Down  |  Up   | Right |  |  |
 // |  | Undo | Cut  |  Copy    | Paste  | Redo |   | Home | PG_DN | PG_UP | END   |  |  |
 //                                    |  |  |  |   |  | DEL -> FUNC |  |
       label = "NAV";
       bindings = <
-&none &none      &none       &u_caps_word  &none       &none         &none     &none     &none     &none     &none  &none
+&none &none      &none       &u_caps_word  &none       &none         &kp DEL   &kp INS   &none     &none     &none  &none
 &none &kp LGUI   &kp LALT    &kp LCTRL     &kp LSHIFT  &none         &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &none  &none
 &none &kp K_UNDO &kp K_PASTE &kp K_COPY    &kp K_CUT   &kp K_REDO    &kp HOME  &kp PG_DN &kp PG_UP &kp END   &none  &none
                                            &trans &trans &trans        &trans &lt FUNC DEL &trans
@@ -125,15 +125,15 @@ DOUBLE_TAP(next_prev, 200, &kp C_NEXT, &kp C_PREV)
 
     adjust_layer {
 // -----------------------------------------------------------------------------------------
-// |  |    BT0    | BT1 | BT2 | BT3 |   BT4   |   |      |            |       |       |           |  |
-// |  | OUT_TOG   |     |     |     |         |   | Mute | Play/Pause | Vol - | Vol + | Prev/Next |  |
-// |  | EP toggle |     |     |     | WIN_SCR |   |  WIN_TEAMS_MUTE   |       |       |           |  |
+// |  |    BT0    |  BT1  | BT2 | BT3 |   BT4   |   |      |            |       |       |           |  |
+// |  | OUT_TOG   | Reset |     |     |         |   | Mute | Play/Pause | Vol - | Vol + | Prev/Next |  |
+// |  | EP toggle | Flash |     |     | WIN_SCR |   |  WIN_TEAMS_MUTE   |       |       |           |  |
 //                                   |  |  |  |   |  |  |  |
       label = "ADJUST";
       bindings = <
 &none &u_bt_sel_0 &u_bt_sel_1 &u_bt_sel_2 &u_bt_sel_3 &u_bt_sel_4 &none               &none             &none         &none         &none      &none
-&none &u_out_tog  &none       &none       &none       &none       &kp K_MUTE          &kp C_PLAY_PAUSE  &kp C_VOL_DN  &kp C_VOL_UP  &next_prev &none
-&none &u_ep_tog   &none       &none       &none       &kp WIN_SCR &kp WIN_TEAMS_MUTE  &none             &none         &none         &none      &none
+&none &u_out_tog  &sys_reset  &none       &none       &none       &kp K_MUTE          &kp C_PLAY_PAUSE  &kp C_VOL_DN  &kp C_VOL_UP  &next_prev &none
+&none &u_ep_tog   &bootloader &none       &none       &kp WIN_SCR &kp WIN_TEAMS_MUTE  &none             &none         &none         &none      &none
                               &trans &trans   &trans   &trans   &trans    &trans
       >;
     };
