@@ -72,7 +72,7 @@ DOUBLE_TAP(next_prev, 200, &kp C_NEXT, &kp C_PREV)
       label = "SYMBOL";
       bindings = <
 &none  &kp N1     &kp N2     &kp N3    &kp N4     &kp N5       &kp N6      &kp N7  &kp N8  &kp N9  &kp N0      &none
-&none &hm LGUI LBRC &hm LALT LPAR &hm LCTRL RPAR &hm LSHIFT RBRC  &kp EQUAL     &kp PLUS       &hm RSHIFT MINUS &hm RCTRL RBKT  &hm RALT RBRC &hm RGUI SEMI &none
+&none &hm LGUI LBRC &hm LALT LPAR &hm LCTRL RPAR &hm LSHIFT RBRC  &kp EQUAL     &kp PLUS       &hm RSHIFT MINUS &hm RCTRL LBKT  &hm RALT RBKT &hm RGUI SEMI &none
 &none &kp TILDE     &kp GRAVE     &kp PIPE       &kp UNDER        &kp SLASH     &kp BACKSLASH  &kp AT           &kp LT          &kp GT        &kp QMARK     &none
                        &trans &lt DIA ESC   &trans   &trans   &trans    &trans
       >;
