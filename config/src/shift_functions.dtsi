@@ -10,4 +10,5 @@ SHIFT_FUNCTION(u_out_tog, &out OUT_TOG, &out OUT_USB)
 
 SHIFT_FUNCTION(u_caps_word, &caps_word, &kp CAPS)
 
-SHIFT_FUNCTION(u_ep_tog, &ext_power EP_TOG, &ext_power EP_OFF)
+// Triggers errors in build with Zephyr 3.5
+// SHIFT_FUNCTION(u_ep_tog, &ext_power EP_TOG, &ext_power EP_OFF)
