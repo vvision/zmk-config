@@ -9,7 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- Added numbers in the function layer.
+- Add numbers in the function layer.
+- Add combos for caps_word and escape key.
 
 ### Changed
 
