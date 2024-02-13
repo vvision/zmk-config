@@ -18,6 +18,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Move number layer to middle left thumb key.
 - Make symbols directly accessible and reorder the whole symbol layer.
 
+### Removed
+
+- Remove escape key from middle left thumb in symbol layer.
+
 ## [0.2.5] - 2024-02-13
 
 ### Added
