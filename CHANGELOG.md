@@ -7,7 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
 
+- Added numbers in the function layer.
+
+### Changed
+
+- Rename function layer to number layer.
+- Move number layer to middle left thumb key.
 
 ## [0.2.5] - 2024-02-13
 

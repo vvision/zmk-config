@@ -52,14 +52,14 @@ DOUBLE_TAP(next_prev, 200, &kp C_NEXT, &kp C_PREV)
 // |  | Q         | W         | E          |  R          |  T  |   |  Y  | U           |  I         |  O        |  P        |  |
 // |  | A -> LGUI | S -> LALT | D -> LCTRL | F -> LSHIFT |  G  |   |  H  | J -> RSHIFT | K -> RCTRL | L -> RALT | ; -> RGUI |  |
 // |  | Z         | X         | C          |  V          |  B  |   |  N  | M           |  ,         |  .        |  /        |  |
-//                            | ESC | TAB -> DIA | SPC -> NAV  |   | ENT -> SYM | BSPC -> NUM | DEL |
+//                            | ESC | TAB -> NUM | SPC -> NAV  |   | ENT -> SYM | BSPC -> DIA | DEL |
 //
       label = "QWERTY";
       bindings = <
 &none &kp Q       &kp W       &kp E       &kp R         &kp T   &kp Y &kp U         &kp I       &kp O       &kp P         &none
 &none &hm LGUI A  &hm LALT S  &hm LCTRL D &hm LSHIFT F  &kp G   &kp H &hm RSHIFT J  &hm RCTRL K &hm RALT L  &hm RGUI SEMI &none
 &none &kp Z       &kp X       &kp C       &kp V         &kp B   &kp N &kp M         &kp COMMA   &kp DOT     &kp FSLH      &none
-                &kp ESC &lt DIA TAB  &lt NAV SPACE   &lt SYM RET &lt NUM BSPC  &kp DEL
+                &kp ESC &lt NUM TAB  &lt NAV SPACE   &lt SYM RET &lt DIA BSPC  &kp DEL
       >;
     };
 
@@ -68,13 +68,13 @@ DOUBLE_TAP(next_prev, 200, &kp C_NEXT, &kp C_PREV)
 // |  |  1 !      |  2 @      |    3 #     |    4 $      | 5 % |   | 6 ^ |  7 &        |   8 *      |  9  (     |   0  )    |  |
 // |  | { -> LGUI | ( -> LALT | ) -> LCTRL | } -> LSHIFT |  =  |   |  +  | - -> RSHIFT | [ -> RCTRL | ] -> RALT | ; -> RGUI |  |
 // |  |     ~     |     `     |     "|"    |     _       |  /  |   |  \  |      @      |     <      |     >     |     ?     |  |
-//                                          |  | ESC -> DIA |  |   |  |  |  |
+//                                          |  | ESC -> NUM |  |   |  |  |  |
       label = "SYMBOL";
       bindings = <
 &none  &kp N1     &kp N2     &kp N3    &kp N4     &kp N5       &kp N6      &kp N7  &kp N8  &kp N9  &kp N0      &none
 &none &hm LGUI LBRC &hm LALT LPAR &hm LCTRL RPAR &hm LSHIFT RBRC  &kp EQUAL     &kp PLUS       &hm RSHIFT MINUS &hm RCTRL LBKT  &hm RALT RBKT &hm RGUI SEMI &none
 &none &kp TILDE     &kp GRAVE     &kp PIPE       &kp UNDER        &kp SLASH     &kp BACKSLASH  &kp AT           &kp LT          &kp GT        &kp QMARK     &none
-                       &trans &lt DIA ESC   &trans   &trans   &trans    &trans
+                       &trans &lt NUM ESC   &trans   &trans   &trans    &trans
       >;
     };
 
@@ -98,13 +98,13 @@ DOUBLE_TAP(next_prev, 200, &kp C_NEXT, &kp C_PREV)
 // |  |      |      | CAPSLOCK |        |      |   | DEL  |  INS  |       |       |  |  |
 // |  | LGUI | LALT | LCTRL    | LSHIFT |      |   | Left | Down  |  Up   | Right |  |  |
 // |  | Undo | Cut  |  Copy    | Paste  | Redo |   | Home | PG_DN | PG_UP | END   |  |  |
-//                                    |  |  |  |   |  | DEL -> NUM |  |
+//                                    |  |  |  |   |  | DEL -> DIA |  |
       label = "NAV";
       bindings = <
 &none &none     &none     &u_caps_word &none       &none         &kp DEL   &kp INS   &none     &none     &none  &none
 &none &kp LGUI  &kp LALT  &kp LCTRL    &kp LSHIFT  &none         &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &none  &none
 &none &kp LC(Z) &kp LC(X) &kp LC(C)    &kp LC(V)   &kp LC(LS(Z)) &kp HOME  &kp PG_DN &kp PG_UP &kp END   &none  &none
-                                           &trans &trans &trans        &trans &lt NUM DEL &trans
+                                           &trans &trans &trans        &trans &lt DIA DEL &trans
       >;
     };
 
