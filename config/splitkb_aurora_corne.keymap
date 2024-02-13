@@ -69,16 +69,16 @@ DOUBLE_TAP(next_prev, 200, &kp C_NEXT, &kp C_PREV)
 
     symbol_layer {
 // -----------------------------------------------------------------------------------------
-// |  |  1 !      |  2 @      |    3 #     |    4 $      | 5 % |   | 6 ^ |  7 &        |   8 *      |  9  (     |   0  )    |  |
-// |  | { -> LGUI | ( -> LALT | ) -> LCTRL | } -> LSHIFT |  =  |   |  +  | - -> RSHIFT | [ -> RCTRL | ] -> RALT | ; -> RGUI |  |
-// |  |     ~     |     `     |     "|"    |     _       |  /  |   |  \  |      @      |     <      |     >     |     ?     |  |
+// |  |    @      |     <     |      >     |      $      | % |   |  ^  |     &       |     *      |    '      |     `     |  |
+// |  | { -> LGUI | ( -> LALT | ) -> LCTRL | } -> LSHIFT | = |   |  \  | + -> RSHIFT | - -> RCTRL | / -> RALT | " -> RGUI |  |
+// |  |     ~     |     [     |      ]     |      _      | # |   | "|" |     !       |     ;      |     :     |     ?     |  |
 //                                          |  | ESC -> NUM |  |   |  |  |  |
       label = "SYMBOL";
       bindings = <
-&none  &kp N1     &kp N2     &kp N3    &kp N4     &kp N5       &kp N6      &kp N7  &kp N8  &kp N9  &kp N0      &none
-&none &hm LGUI LBRC &hm LALT LPAR &hm LCTRL RPAR &hm LSHIFT RBRC  &kp EQUAL     &kp PLUS       &hm RSHIFT MINUS &hm RCTRL LBKT  &hm RALT RBKT &hm RGUI SEMI &none
-&none &kp TILDE     &kp GRAVE     &kp PIPE       &kp UNDER        &kp SLASH     &kp BACKSLASH  &kp AT           &kp LT          &kp GT        &kp QMARK     &none
-                       &trans &lt NUM ESC   &trans   &trans   &trans    &trans
+&none &kp AT        &kp LT        &kp GT         &kp DLLR         &kp PRCNT    &kp CARET &kp AMPS        &kp STAR         &kp SQT        &kp GRAVE     &none
+&none &hm LGUI LBRC &hm LALT LPAR &hm LCTRL RPAR &hm LSHIFT RBRC  &kp EQUAL    &kp BSLH  &hm RSHIFT PLUS &hm RCTRL MINUS  &hm RALT SLASH &hm RGUI DQT  &none
+&none &kp TILDE     &kp LBKT      &kp RBKT       &kp UNDER        &kp HASH     &kp PIPE  &kp EXCL        &kp SEMI         &kp COLON      &kp QMARK     &none
+                                                 &trans &lt NUM ESC   &trans   &trans   &trans    &trans
       >;
     };
 
