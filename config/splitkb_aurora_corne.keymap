@@ -116,14 +116,14 @@ DOUBLE_TAP(next_prev, 200, &kp C_NEXT, &kp C_PREV)
 // -----------------------------------------------------------------------------------------
 // |  | F12 | F7 | F8 | F9 |       |   |   | 7 | 8 | 9 |  |  |
 // |  | F11 | F4 | F5 | F6 |       |   |   | 4 | 5 | 6 |  |  |
-// |  | F10 | F1 | F2 | F3 | K_APP |   | 0 | 1 | 2 | 3 |  |  |
-//                        |  |  |  |   |   |   |   |
+// |  | F10 | F1 | F2 | F3 | K_APP |   |   | 1 | 2 | 3 |  |  |
+//                        |  |  |  |   |   | 0 |   |
       label = "NUM";
       bindings = <
 &none &kp F12 &kp F7 &kp F8 &kp F9 &none       &none  &kp N7 &kp N8 &kp N9 &none &none
 &none &kp F11 &kp F4 &kp F5 &kp F6 &none       &none  &kp N4 &kp N5 &kp N6 &none &none
-&none &kp F10 &kp F1 &kp F2 &kp F3 &kp K_APP   &kp N0 &kp N1 &kp N2 &kp N3 &none &none
-                       &trans &trans &trans    &trans &trans &trans
+&none &kp F10 &kp F1 &kp F2 &kp F3 &kp K_APP   &none  &kp N1 &kp N2 &kp N3 &none &none
+                       &trans &trans &trans    &trans &kp N0 &trans
       >;
     };
 
