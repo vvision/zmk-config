@@ -21,6 +21,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed
 
 - Remove escape key from middle left thumb in symbol layer.
+- Remove caps_word from navigation layer.
 
 ## [0.2.5] - 2024-02-13
 

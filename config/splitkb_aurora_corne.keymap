@@ -99,15 +99,15 @@ DOUBLE_TAP(next_prev, 200, &kp C_NEXT, &kp C_PREV)
 
     navigation_layer {
 // -----------------------------------------------------------------------------------------
-// |  |      |      | CAPSLOCK |        |      |   | DEL  |  INS  |       |       |  |  |
-// |  | LGUI | LALT | LCTRL    | LSHIFT |      |   | Left | Down  |  Up   | Right |  |  |
-// |  | Undo | Cut  |  Copy    | Paste  | Redo |   | Home | PG_DN | PG_UP | END   |  |  |
+// |  |      |      |       |        |      |   | DEL  |  INS  |       |       |  |  |
+// |  | LGUI | LALT | LCTRL | LSHIFT |      |   | Left | Down  |  Up   | Right |  |  |
+// |  | Undo | Cut  |  Copy | Paste  | Redo |   | Home | PG_DN | PG_UP | END   |  |  |
 //                                    |  |  |  |   |  | DEL -> DIA |  |
       label = "NAV";
       bindings = <
-&none &none     &none     &u_caps_word &none       &none         &kp DEL   &kp INS   &none     &none     &none  &none
-&none &kp LGUI  &kp LALT  &kp LCTRL    &kp LSHIFT  &none         &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &none  &none
-&none &kp LC(Z) &kp LC(X) &kp LC(C)    &kp LC(V)   &kp LC(LS(Z)) &kp HOME  &kp PG_DN &kp PG_UP &kp END   &none  &none
+&none &none     &none     &none     &none       &none         &kp DEL   &kp INS   &none     &none     &none  &none
+&none &kp LGUI  &kp LALT  &kp LCTRL &kp LSHIFT  &none         &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &none  &none
+&none &kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V)   &kp LC(LS(Z)) &kp HOME  &kp PG_DN &kp PG_UP &kp END   &none  &none
                                            &trans &trans &trans        &trans &lt DIA DEL &trans
       >;
     };
