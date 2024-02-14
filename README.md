@@ -41,7 +41,11 @@ To view all layouts in a graphical way, use [keymap-drawer](https://keymap-drawe
 ### Practise
 
 - Typing Club
-- Keybr
+  - [Typing Basics](https://www.typingclub.com/sportal/program-1.game)
+  - [Typing Jungle](https://www.typingclub.com/sportal/program-3.game)
+- [typing.com](https://www.typing.com/student/lessons)
+- [keybr](https://www.keybr.com)
+- [monkeytype](https://monkeytype.com/)
 
 #### Not tested
 
