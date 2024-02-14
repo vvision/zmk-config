@@ -9,48 +9,48 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Added
 
-- Home row mods on right side in the navigation layer.
-- Numeric operators next to the numpad in navigation layer.
+- Home row mods on right side in the `navigation` layer.
+- Numeric operators next to the numpad in `navigation` layer.
 - Toggle `function` layer by pressing the middle thumb key on both side. 
 
 ### Changed
 
-- Switch to arrow pad on the left side of the navigation layer.
-- Move numbers in navigation layer.
-- Move diacritics toggle key from right thumb cluster to right home row outer key.
+- Switch to arrow pad on the left side of the `navigation` layer.
+- Move numbers in `navigation` layer.
+- Move `diacritics` layer toggle key from right thumb cluster to right home row outer key.
 
 ### Removed
 
-- Remove home row mods from symbol layer as they might not be needed at all here.
+- Remove home row mods from `symbol` layer as they might not be needed at all here.
 - Disable escape combo.
 
 ## [0.3.0] - 2024-02-13
 
 ### Added
 
-- Add numbers in the function layer.
+- Add numbers in the `function` layer.
 - Add combos for caps_word and escape key.
 
 ### Changed
 
-- Rename function layer to number layer.
-- Move number layer to middle left thumb key.
-- Make symbols directly accessible and reorder the whole symbol layer.
+- Rename `function` layer to `number` layer.
+- Move `number` layer to middle left thumb key.
+- Make symbols directly accessible and reorder the whole `symbol` layer.
 
 ### Removed
 
-- Remove escape key from middle left thumb in symbol layer.
-- Remove caps_word from navigation layer.
+- Remove escape key from middle left thumb in `symbol` layer.
+- Remove caps_word from `navigation` layer.
 
 ## [0.2.5] - 2024-02-13
 
 ### Added
 
-- Add shift key in adjust layer
+- Add shift key in `adjust` layer
 
 ### Fixed
 
-- Missing left bracket key in symbol layer.
+- Missing left bracket key in `symbol` layer.
 
 ### Changed
 
@@ -70,7 +70,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- Add insert and delete key to navigation layer, system reset and reset to bootloader to adjust layer.
+- Add insert and delete key to `navigation` layer, system reset and reset to bootloader to `adjust` layer.
 
 ## [0.2.2] - 2024-01-21
 
