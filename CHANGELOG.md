@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Switch to arrow pad on the left side of the navigation layer.
 - Move numbers in navigation layer.
+- Move diacritics toggle key from right thumb cluster to right home row outer key.
 
 ### Removed
 
