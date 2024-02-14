@@ -11,7 +11,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Home row mods on right side in the `navigation` layer.
 - Numeric operators next to the numpad in `navigation` layer.
-- Toggle `function` layer by pressing the middle thumb key on both side. 
+- Toggle `function` layer by pressing the middle thumb key on both side.
+- Add shift on long press of left middle thumb key.
 
 ### Changed
 
