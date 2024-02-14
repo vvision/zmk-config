@@ -34,6 +34,7 @@ To view all layouts in a graphical way, use [keymap-drawer](https://keymap-drawe
 - [5x3_3 Keyboard Layout](https://evantravers.com/articles/2023/05/27/5x3-3-keyboard-layout/#fn1) - [Source](https://github.com/evantravers/zmk-config/blob/master/config/corneish_zen.keymap)
 - [Programming On 34 Keys](https://peppe.rs/posts/programming_on_34_keys/)
 - [Seniply](https://stevep99.github.io/seniply/)
+- [Colemak Mod-DH](https://colemakmods.github.io/mod-dh/)
 - ([A split 34 key layout for ipados](https://mattgemmell.scot/a-split-34-key-layout-for-ipados/))
 - ([selenium33](https://github.com/OneDeadKey/arsenik/tree/main/mods/selenium33))
 
