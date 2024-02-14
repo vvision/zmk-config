@@ -28,4 +28,5 @@ Inspired by:
 - [Programming On 34 Keys](https://peppe.rs/posts/programming_on_34_keys/)
 - [lobre/shaka34 Layout](https://github.com/lobre/shaka34)
 - [Miryoku Reference Manual](https://github.com/manna-harbour/miryoku/tree/master/docs/reference).
+- [Seniply (Numbers Layer)](https://stevep99.github.io/seniply/)
 - ([A split 34 key layout for ipados](https://mattgemmell.scot/a-split-34-key-layout-for-ipados/))
