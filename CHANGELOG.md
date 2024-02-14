@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.4.0] - 2024-02-14
 
+## Added
+
+- Home row mods on right side in the navigation layer.
+
 ### Changed
 
 - Switch to arrow pad on the left side of the navigation layer.
