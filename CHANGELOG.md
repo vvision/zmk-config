@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## Added
 
 - Home row mods on right side in the navigation layer.
+- Numeric operators next to the numpad in navigation layer.
 
 ### Changed
 
@@ -19,6 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed
 
 - Remove home row mods from symbol layer as they might not be needed at all here.
+- Disable escape combo.
 
 ## [0.3.0] - 2024-02-13
 
