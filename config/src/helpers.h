@@ -31,6 +31,7 @@
 /**
  * Usage: COMBO(combo_ql_sqt, 20 21, &kp SQT, 0)
 */
+#define ALL 0xff
 #define COMBO_KEY(name, key_positions, combo_bindings, combo_layers) \
     / { \
         combos { \
