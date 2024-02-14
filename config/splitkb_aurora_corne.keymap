@@ -17,7 +17,7 @@
 #define SYM        1
 #define DIA        2
 #define NAV        3
-#define NUM        4
+#define FUN        4
 #define ADJUST     5
 
 /* MACROS */
@@ -56,14 +56,14 @@ DOUBLE_TAP(next_prev, 200, &kp C_NEXT, &kp C_PREV)
 // |  | Q         | W         | E          |  R          |  T  |   |  Y  | U           |  I         |  O        |  P        |  |
 // |  | A -> LGUI | S -> LALT | D -> LCTRL | F -> LSHIFT |  G  |   |  H  | J -> RSHIFT | K -> RCTRL | L -> RALT | ; -> RGUI |  |
 // |  | Z         | X         | C          |  V          |  B  |   |  N  | M           |  ,         |  .        |  /        |  |
-//                            | ESC | TAB -> NUM | SPC -> NAV  |   | ENT -> SYM | BSPC -> DIA | DEL |
+//                            | ESC | TAB -> FUN | SPC -> NAV  |   | ENT -> SYM | BSPC -> DIA | DEL |
 //
       label = "QWERTY";
       bindings = <
 &none &kp Q       &kp W       &kp E       &kp R         &kp T   &kp Y &kp U         &kp I       &kp O       &kp P         &none
 &none &hm LGUI A  &hm LALT S  &hm LCTRL D &hm LSHIFT F  &kp G   &kp H &hm RSHIFT J  &hm RCTRL K &hm RALT L  &hm RGUI SEMI &none
 &none &kp Z       &kp X       &kp C       &kp V         &kp B   &kp N &kp M         &kp COMMA   &kp DOT     &kp FSLH      &none
-                &kp ESC &lt NUM TAB  &lt NAV SPACE   &lt SYM RET &lt DIA BSPC  &kp DEL
+                &kp ESC &lt FUN TAB  &lt NAV SPACE   &lt SYM RET &lt DIA BSPC  &kp DEL
       >;
     };
 
@@ -99,31 +99,31 @@ DOUBLE_TAP(next_prev, 200, &kp C_NEXT, &kp C_PREV)
 
     navigation_layer {
 // -----------------------------------------------------------------------------------------
-// |  |      |      |       |        |      |   | DEL  |  INS  |       |       |  |  |
-// |  | LGUI | LALT | LCTRL | LSHIFT |      |   | Left | Down  |  Up   | Right |  |  |
-// |  | Undo | Cut  |  Copy | Paste  | Redo |   | Home | PG_DN | PG_UP | END   |  |  |
-//                                    |  |  |  |   |  | DEL -> DIA |  |
+// |  | ESC  | Home |  Up  | End   | PG_UP |   |     | 7 | 8 | 9 |   |  |
+// |  | LGUI | Left | Down | Right | PG_DN |   |     | 4 | 5 | 6 | 0 |  |
+// |  | Undo | Cut  | Copy | Paste |  Del  |   | Ins | 1 | 2 | 3 |   |  |
+//                                    |  |  |  |   |  |  |  |
       label = "NAV";
       bindings = <
-&none &none     &none     &none     &none       &none         &kp DEL   &kp INS   &none     &none     &none  &none
-&none &kp LGUI  &kp LALT  &kp LCTRL &kp LSHIFT  &none         &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &none  &none
-&none &kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V)   &kp LC(LS(Z)) &kp HOME  &kp PG_DN &kp PG_UP &kp END   &none  &none
-                                           &trans &trans &trans        &trans &lt DIA DEL &trans
+&none &kp ESC   &kp HOME  &kp UP    &kp END    &kp PG_UP    &none   &kp N7 &kp N8 &kp N9 &none  &none
+&none &kp LGUI  &kp LEFT  &kp DOWN  &kp RIGHT  &kp PG_DN    &none   &kp N4 &kp N5 &kp N6 &kp N0 &none
+&none &kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V)  &kp DEL      &kp INS &kp N1 &kp N2 &kp N3 &none  &none
+                                   &trans &trans &trans     &trans &trans &trans
       >;
     };
 
-    number_layer {
+    function_layer {
 // -----------------------------------------------------------------------------------------
-// |  | F12 | F7 | F8 | F9 |       |   |   | 7 | 8 | 9 |  |  |
-// |  | F11 | F4 | F5 | F6 |       |   |   | 4 | 5 | 6 |  |  |
-// |  | F10 | F1 | F2 | F3 | K_APP |   |   | 1 | 2 | 3 |  |  |
-//                        |  |  |  |   |   | 0 |   |
-      label = "NUM";
+// |  | F12 | F7 | F8 | F9 |       |   |   |  |  |  |  |  |
+// |  | F11 | F4 | F5 | F6 |       |   |   |  |  |  |  |  |
+// |  | F10 | F1 | F2 | F3 | K_APP |   |   |  |  |  |  |  |
+//                        |  |  |  |   |  |  |  |
+      label = "FUNC";
       bindings = <
-&none &kp F12 &kp F7 &kp F8 &kp F9 &none       &none  &kp N7 &kp N8 &kp N9 &none &none
-&none &kp F11 &kp F4 &kp F5 &kp F6 &none       &none  &kp N4 &kp N5 &kp N6 &none &none
-&none &kp F10 &kp F1 &kp F2 &kp F3 &kp K_APP   &none  &kp N1 &kp N2 &kp N3 &none &none
-                       &trans &trans &trans    &trans &kp N0 &trans
+&none &kp F12 &kp F7 &kp F8 &kp F9 &none       &none &none &none &none &none &none
+&none &kp F11 &kp F4 &kp F5 &kp F6 &none       &none &none &none &none &none &none
+&none &kp F10 &kp F1 &kp F2 &kp F3 &kp K_APP   &none &none &none &none &none &none
+                       &trans &trans &trans    &trans &trans &trans
       >;
     };
 
