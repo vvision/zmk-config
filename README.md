@@ -35,6 +35,7 @@ To view all layouts in a graphical way, use [keymap-drawer](https://keymap-drawe
 - [Programming On 34 Keys](https://peppe.rs/posts/programming_on_34_keys/)
 - [Seniply](https://stevep99.github.io/seniply/)
 - [Colemak Mod-DH](https://colemakmods.github.io/mod-dh/)
+- [Ben Vallack Layout](https://github.com/benvallack/zmk-config/blob/84ae125986b18e1e6dfb1f2a6a15777429f29520/config/cradio.keymap) ([Video](https://www.youtube.com/watch?v=8wZ8FRwOzhU))
 - ([A split 34 key layout for ipados](https://mattgemmell.scot/a-split-34-key-layout-for-ipados/))
 - ([selenium33](https://github.com/OneDeadKey/arsenik/tree/main/mods/selenium33))
 
