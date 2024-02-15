@@ -32,8 +32,8 @@ HOLD_TAP(hm_fr_u_circumflex, 175, &kp, &fr_u_circumflex)
 COMBO_KEY(combo_kl_sqt, 20 21, &kp SQT, BASE)
 /* Hold S and D for ` (in qwerty) */
 COMBO_KEY(combo_sd_grave, 14 15, &kp GRAVE, BASE)
-/* Hold A and ; for ESC (in qwerty) */
-// COMBO_KEY(combo_a_semi_colon_escape, 14 25, &kp ESC, BASE)
+/* Hold B and N for ESC (in qwerty) */
+COMBO_KEY(combo_b_n_escape, 30 31, &kp ESC, BASE)
 /* Hold Z and / for caps_word (in qwerty) */
 COMBO_KEY(combo_z_slash_caps_word, 26 35, &caps_word, BASE)
 
