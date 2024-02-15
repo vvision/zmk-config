@@ -5,6 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.5.0] - 2024-02-15
+
+### Changed
+
+- The `diacritics` layer is now sticky.
+- Sticky layers will release after 1500 ms, rather than the default 1000 ms.
+
+### Removed
+
+- As `diacritics` layer is now a sticky layer, it removes `;` key and the right home row `GUI` configured on this key.
+
 ## [0.4.0] - 2024-02-14
 
 ## Added
