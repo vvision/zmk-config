@@ -34,8 +34,8 @@ COMBO_KEY(combo_kl_sqt, 20 21, &kp SQT, BASE)
 COMBO_KEY(combo_sd_grave, 14 15, &kp GRAVE, BASE)
 /* Hold B and N for ESC (in qwerty) */
 COMBO_KEY(combo_b_n_escape, 30 31, &kp ESC, BASE)
-/* Hold Z and / for caps_word (in qwerty) */
-COMBO_KEY(combo_z_slash_caps_word, 26 35, &caps_word, BASE)
+/* Hold F and J for caps_word (in qwerty) */
+COMBO_KEY(combo_z_slash_caps_word, 17 20, &caps_word, BASE)
 
 DOUBLE_TAP(next_prev, 200, &kp C_NEXT, &kp C_PREV)
 
