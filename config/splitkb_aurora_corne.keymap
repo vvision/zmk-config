@@ -60,14 +60,14 @@ DOUBLE_TAP(next_prev, 200, &kp C_NEXT, &kp C_PREV)
 // |  | Q         | W         | E          |  R          |  T  |   |  Y  | U           |  I         |  O        |  P  |  |
 // |  | A -> LGUI | S -> LALT | D -> LCTRL | F -> LSHIFT |  G  |   |  H  | J -> RSHIFT | K -> RCTRL | L -> RALT | DIA |  |
 // |  | Z         | X         | C          |  V          |  B  |   |  N  | M           |  ,         |  .        |  /  |  |
-//                         | ESC | TAB -> LSHIFT | SPC -> NAV  |   | ENT -> SYM | BSPC -> FUN | DEL |
+//                                | ESC | LSHIFT | SPC -> NAV  |   | ENT -> SYM | BSPC -> FUN | DEL |
 //
       label = "QWERTY";
       bindings = <
 &none &kp Q       &kp W       &kp E       &kp R         &kp T   &kp Y &kp U         &kp I       &kp O       &kp P    &none
 &none &hm LGUI A  &hm LALT S  &hm LCTRL D &hm LSHIFT F  &kp G   &kp H &hm RSHIFT J  &hm RCTRL K &hm RALT L  &sl DIA  &none
 &none &kp Z       &kp X       &kp C       &kp V         &kp B   &kp N &kp M         &kp COMMA   &kp DOT     &kp FSLH &none
-                &kp ESC &hm LSHIFT TAB  &lt NAV SPACE   &lt SYM RET &lt FUN BSPC  &kp DEL
+                      &kp ESC &sk LSHIFT  &lt NAV SPACE   &lt SYM RET &lt FUN BSPC  &kp DEL
       >;
     };
 
