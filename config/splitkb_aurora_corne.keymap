@@ -118,15 +118,15 @@ DOUBLE_TAP(next_prev, 200, &kp C_NEXT, &kp C_PREV)
 
     function_layer {
 // -----------------------------------------------------------------------------------------
-// |  | F12 | F7 | F8 | F9 |       |   |   |  |  |  |  |  |
-// |  | F11 | F4 | F5 | F6 |       |   |   |  |  |  |  |  |
-// |  | F10 | F1 | F2 | F3 | K_APP |   |   |  |  |  |  |  |
+// |  |  |  |  |  |  |   |       | F7 | F8 | F9 | F12 |  |
+// |  |  |  |  |  |  |   |       | F4 | F5 | F6 | F11 |  |
+// |  |  |  |  |  |  |   | K_APP | F1 | F2 | F3 | F10 |  |
 //                        |  |  |  |   |  |  |  |
       label = "FUNC";
       bindings = <
-&none &kp F12 &kp F7 &kp F8 &kp F9 &none       &none &none &none &none &none &none
-&none &kp F11 &kp F4 &kp F5 &kp F6 &none       &none &none &none &none &none &none
-&none &kp F10 &kp F1 &kp F2 &kp F3 &kp K_APP   &none &none &none &none &none &none
+&none &none &none &none &none &none       &none     &kp F7 &kp F8 &kp F9 &kp F12 &none
+&none &none &none &none &none &none       &none     &kp F4 &kp F5 &kp F6 &kp F11 &none
+&none &none &none &none &none &none       &kp K_APP &kp F1 &kp F2 &kp F3 &kp F10 &none
                        &trans &trans &trans    &trans &trans &trans
       >;
     };
