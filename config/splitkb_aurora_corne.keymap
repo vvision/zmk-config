@@ -37,7 +37,7 @@ COMBO_KEY(combo_b_n_escape, 30 31, &kp ESC, BASE)
 /* Hold F and J for caps_word (in qwerty) */
 COMBO_KEY(combo_z_slash_caps_word, 17 20, &caps_word, BASE)
 
-DOUBLE_TAP(next_prev, 200, &kp C_NEXT, &kp C_PREV)
+DOUBLE_TAP(dt_next_prev, 200, &kp C_NEXT, &kp C_PREV)
 DOUBLE_TAP(dt_shift_func, 200, &sk LSHIFT, &to FUN)
 
 &sl {
@@ -141,7 +141,7 @@ DOUBLE_TAP(dt_shift_func, 200, &sk LSHIFT, &to FUN)
       label = "ADJUST";
       bindings = <
 &none &u_bt_sel_0 &u_bt_sel_1 &u_bt_sel_2 &u_bt_sel_3 &u_bt_sel_4 &none               &none             &none         &none         &none      &none
-&none &u_out_tog  &sys_reset  &none       &kp LSHIFT  &none       &kp K_MUTE          &kp C_PLAY_PAUSE  &kp C_VOL_DN  &kp C_VOL_UP  &next_prev &none
+&none &u_out_tog  &sys_reset  &none       &kp LSHIFT  &none       &kp K_MUTE          &kp C_PLAY_PAUSE  &kp C_VOL_DN  &kp C_VOL_UP  &dt_next_prev &none
 &none &none       &bootloader &none       &none       &kp WIN_SCR &kp WIN_TEAMS_MUTE  &none             &none         &none         &none      &none
                               &trans &trans   &trans   &trans   &trans    &trans
       >;
