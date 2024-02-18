@@ -38,7 +38,7 @@ COMBO_KEY(combo_b_n_escape, 29 32, &kp ESC, BASE)
 COMBO_KEY(combo_z_slash_caps_word, 28 33, &to FUN, BASE)
 
 DOUBLE_TAP(dt_next_prev, 200, &kp C_NEXT, &kp C_PREV)
-DOUBLE_TAP(dt_shift_caps_word, 200, &sk LSHIFT, caps_word)
+DOUBLE_TAP(dt_shift_caps_word, 200, &sk LSHIFT, &caps_word)
 
 &sl {
     release-after-ms = <1500>;
