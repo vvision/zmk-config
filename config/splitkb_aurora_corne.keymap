@@ -32,13 +32,13 @@ HOLD_TAP(hm_fr_u_circumflex, 175, &kp, &fr_u_circumflex)
 COMBO_KEY(combo_kl_sqt, 20 21, &kp SQT, BASE)
 /* Hold S and D for ` (in qwerty) */
 COMBO_KEY(combo_sd_grave, 14 15, &kp GRAVE, BASE)
-/* Hold B and N for ESC (in qwerty) */
-COMBO_KEY(combo_b_n_escape, 30 31, &kp ESC, BASE)
-/* Hold F and J for caps_word (in qwerty) */
-COMBO_KEY(combo_z_slash_caps_word, 17 20, &caps_word, BASE)
+/* Hold V and M for ESC (in qwerty) */
+COMBO_KEY(combo_b_n_escape, 29 32, &kp ESC, BASE)
+/* Hold C and , for FUNC layer (in qwerty) */
+COMBO_KEY(combo_z_slash_caps_word, 28 33, &to FUN, BASE)
 
 DOUBLE_TAP(dt_next_prev, 200, &kp C_NEXT, &kp C_PREV)
-DOUBLE_TAP(dt_shift_func, 200, &sk LSHIFT, &to FUN)
+DOUBLE_TAP(dt_shift_caps_word, 200, &sk LSHIFT, caps_word)
 
 &sl {
     release-after-ms = <1500>;
@@ -68,7 +68,7 @@ DOUBLE_TAP(dt_shift_func, 200, &sk LSHIFT, &to FUN)
 &none &kp Q       &kp W       &kp E       &kp R         &kp T   &kp Y &kp U         &kp I       &kp O       &kp P    &none
 &none &hm LGUI A  &hm LALT S  &hm LCTRL D &hm LSHIFT F  &kp G   &kp H &hm RSHIFT J  &hm RCTRL K &hm RALT L  &sl DIA  &none
 &none &kp Z       &kp X       &kp C       &kp V         &kp B   &kp N &kp M         &kp COMMA   &kp DOT     &kp FSLH &none
-                      &kp ESC &dt_shift_func  &lt NAV SPACE   &lt SYM RET &kp BSPC  &kp DEL
+                      &kp ESC &dt_shift_caps_word  &lt NAV SPACE   &lt SYM RET &kp BSPC  &kp DEL
       >;
     };
 
