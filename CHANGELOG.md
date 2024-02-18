@@ -5,6 +5,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.6.0] - 2024-02-18
+
+### Added
+
+- Make shift key sticky on middle left thumb key.
+- Toggle `function` layer with double tap on shift.
+
+### Changed
+
+- Move tab key on outer left thumb key in `symbol` layer.
+- Move caps_word combo under F and J in qwerty in `base` layer.
+- Switch function keys to right part in `function` layer.
+
 ## [0.5.1] - 2024-02-16
 
 ### Changed
