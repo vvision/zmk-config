@@ -33,11 +33,11 @@ COMBO_KEY(combo_kl_sqt, 20 21, &kp SQT, BASE)
 /* Hold S and D for ` (in qwerty) */
 COMBO_KEY(combo_sd_grave, 14 15, &kp GRAVE, BASE)
 /* Hold R and U for caps_word (in qwerty) */
-COMBO_KEY(combo_r_u_caps_word, 5 8, &caps_word, BASE)
+COMBO_KEY(combo_r_u_caps_word, 4 7, &caps_word, BASE)
+/* Hold V and M for ESC (in qwerty) */
+COMBO_KEY(combo_b_n_escape, 28 31, &kp ESC, BASE)
 /* Hold C and , for FUNC layer (in qwerty) */
-COMBO_KEY(combo_z_slash_caps_word, 28 33, &to FUN, BASE FUN)
-/* Test */
-COMBO_KEY(combo_z_slash_caps_wfghord, 2 3, &to FUN, BASE FUN)
+COMBO_KEY(combo_c_coma_to_layer_function, 27 32, &to FUN, BASE FUN)
 
 DOUBLE_TAP(dt_next_prev, 200, &kp C_NEXT, &kp C_PREV)
 
