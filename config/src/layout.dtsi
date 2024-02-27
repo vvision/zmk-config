@@ -51,3 +51,4 @@ MIRYOKU_LAYER_LIST
 #include "helpers.h"
 #include "shift_functions.dtsi"
 #include "diacritics.dtsi"
+#include "behaviors.dtsi"

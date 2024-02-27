@@ -18,7 +18,7 @@ U_NP,           U_NP,           &kp ESC,        &sk LSHIFT,         &lt U_NAV SP
 // |  | { | ( | ) | } | = |   |  \  | + | - | / | " |  |
 // |  | ~ | [ | ] | _ | # |   | "|" | ! | ; | : | ? |  |
 //     |  |  | TAB -> NAV |   |  |  |  |
-#define UNICODA_ALTERNATIVES_BASE_SYM \
+#define UNICODA_ALTERNATIVES_SYM \
 &kp AT,     &kp LT,   &kp GT,   &kp DLLR,  &kp PRCNT,      &kp CARET, &kp AMPS, &kp STAR,  &kp SQT,   &kp GRAVE, \
 &kp LBRC,   &kp LPAR, &kp RPAR, &kp RBRC,  &kp EQUAL,      &kp BSLH,  &kp PLUS, &kp MINUS, &kp SLASH, &kp DQT,   \
 &kp TILDE,  &kp LBKT, &kp RBKT, &kp UNDER, &kp HASH,       &kp PIPE,  &kp EXCL, &kp SEMI,  &kp COLON, &kp QMARK \
