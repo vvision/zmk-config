@@ -21,6 +21,10 @@ To view all layouts in a graphical way, use [keymap-drawer](https://keymap-drawe
 
 ## Resources
 
+### References
+
+- [splitkb - Aurora Corne](https://github.com/splitkb/aurora/tree/master/Aurora%20Corne)
+
 ### Inspiration
 
 - [Miryoku Reference Manual](https://github.com/manna-harbour/miryoku/tree/master/docs/reference) for layers and home row mods.
