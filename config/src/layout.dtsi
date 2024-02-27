@@ -27,6 +27,10 @@ COMBO_KEY(combo_c_coma_to_layer_function, 27 32, &to U_FUN, U_BASE U_FUN)
 
 DOUBLE_TAP(dt_next_prev, 200, &kp C_NEXT, &kp C_PREV)
 
+&sl {
+    release-after-ms = <1500>;
+};
+
 / {
   conditional_layers {
     compatible = "zmk,conditional-layers";
