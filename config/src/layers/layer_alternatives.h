@@ -21,7 +21,7 @@ U_NP,           U_NP,           &kp ESC,        &sk LSHIFT,         &lt U_NAV SP
 #define UNICODA_ALTERNATIVES_SYM \
 &kp AT,     &kp LT,   &kp GT,   &kp DLLR,  &kp PRCNT,      &kp CARET, &kp AMPS, &kp STAR,  &kp SQT,   &kp GRAVE, \
 &kp LBRC,   &kp LPAR, &kp RPAR, &kp RBRC,  &kp EQUAL,      &kp BSLH,  &kp PLUS, &kp MINUS, &kp SLASH, &kp DQT,   \
-&kp TILDE,  &kp LBKT, &kp RBKT, &kp UNDER, &kp HASH,       &kp PIPE,  &kp EXCL, &kp SEMI,  &kp COLON, &kp QMARK \
+&kp TILDE,  &kp LBKT, &kp RBKT, &kp UNDER, &kp HASH,       &kp PIPE,  &kp EXCL, &kp SEMI,  &kp COLON, &kp QMARK, \
 U_NP,       U_NP,     &trans,   &trans,    &hm U_NAV TAB,  &trans,    &trans,   &trans,    U_NP,      U_NP
 
 // -----------------------------------------------------------------------------------------
@@ -33,7 +33,7 @@ U_NP,       U_NP,     &trans,   &trans,    &hm U_NAV TAB,  &trans,    &trans,   
 &kp ESC,       &kp HOME,  &kp UP,    &kp END,    &kp PG_UP,    &kp EQUAL, &kp N7,         &kp N8,       &kp N9,      &kp MINUS,      \
 &hm LGUI TAB,  &kp LEFT,  &kp DOWN,  &kp RIGHT,  &kp PG_DN,    &kp STAR,  &hm RSHIFT N4,  &hm RCTRL N5, &hm RALT N6, &hm RGUI PLUS,  \
 &kp LC(Z),     &kp LC(X), &kp LC(C), &kp LC(V),  &kp DEL,      &kp N0,    &kp N1,         &kp N2,       &kp N3,      &kp DOT,        \
-U_NP,          U_NP,      &trans,    &trans,     &trans,      &trans,     &trans,         &trans,       U_NP,       U_NP
+U_NP,          U_NP,      &trans,    &trans,     &trans,       &trans,    &trans,         &trans,       U_NP,        U_NP
 
 
 // -----------------------------------------------------------------------------------------
