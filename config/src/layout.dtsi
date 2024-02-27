@@ -8,6 +8,11 @@
 
 #include "layout.h"
 
+#include "helpers.h"
+#include "shift_functions.dtsi"
+#include "diacritics.dtsi"
+#include "behaviors.dtsi"
+
 /* MACROS */
 #define WIN_TEAMS_MUTE LC(LS(M)) // Windows - Teams - Toggle Mute (Should be tested) // Ctrl + Shift + M
 #define WIN_SCR LG(LS(S)) // Windows - Screenshot // Win + Shift + S
@@ -51,8 +56,3 @@ MIRYOKU_LAYER_LIST
 #undef MIRYOKU_X
   };
 };
-
-#include "helpers.h"
-#include "shift_functions.dtsi"
-#include "diacritics.dtsi"
-#include "behaviors.dtsi"
