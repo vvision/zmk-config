@@ -1,0 +1,7 @@
+#pragma once
+
+#include "helpers.h"
+
+/* https://precondition.github.io/home-row-mods */
+HOLD_TAP(u_mt, 175, &kp, &kp)
+HOLD_TAP(hm, 175, &kp, &kp)
