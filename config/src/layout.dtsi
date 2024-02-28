@@ -8,7 +8,7 @@
 
 #include "layout.h"
 
-#include "helpers.h"
+#include "helpers.dtsi"
 #include "shift_functions.dtsi"
 #include "diacritics.dtsi"
 #include "behaviors.dtsi"

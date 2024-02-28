@@ -25,4 +25,6 @@
 #define U_NA &none // present but not available for use
 #define U_NU &none // available but not used
 
-#include "shift_functions.dtsi"
+#include "shift_functions.h"
+
+#include "behaviors.h"

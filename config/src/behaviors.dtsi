@@ -1,6 +1,6 @@
 #pragma once
 
-#include "helpers.h"
+#include "helpers.dtsi"
 
 /* https://precondition.github.io/home-row-mods */
 HOLD_TAP(u_mt, 175, &kp, &kp)
