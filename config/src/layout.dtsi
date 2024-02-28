@@ -12,23 +12,13 @@
 #include "shift_functions.dtsi"
 #include "diacritics.dtsi"
 #include "behaviors.dtsi"
+#include "combos.dtsi"
 
 /* MACROS */
 #define WIN_TEAMS_MUTE LC(LS(M)) // Windows - Teams - Toggle Mute (Should be tested) // Ctrl + Shift + M
 #define WIN_SCR LG(LS(S)) // Windows - Screenshot // Win + Shift + S
 
 HOLD_TAP(hm_fr_u_circumflex, 175, &kp, &fr_u_circumflex)
-
-/* Hold K and L for ' (in qwerty) */
-COMBO_KEY(combo_kl_sqt, 20 21, &kp SQT, U_BASE)
-/* Hold S and D for ` (in qwerty) */
-COMBO_KEY(combo_sd_grave, 14 15, &kp GRAVE, U_BASE)
-/* Hold R and U for caps_word (in qwerty) */
-COMBO_KEY(combo_r_u_caps_word, 4 7, &caps_word, U_BASE)
-/* Hold V and M for ESC (in qwerty) */
-COMBO_KEY(combo_b_n_escape, 28 31, &kp ESC, U_BASE)
-/* Hold C and , for FUNC layer (in qwerty) */
-COMBO_KEY(combo_c_coma_to_layer_function, 27 32, &to U_FUN, U_BASE U_FUN)
 
 DOUBLE_TAP(dt_next_prev, 200, &kp C_NEXT, &kp C_PREV)
 

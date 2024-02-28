@@ -1,0 +1,43 @@
+
+#define COMBOS_TERM 50
+
+/**
+ * Usage: COMBO(combo_ql_sqt, 20 21, &kp SQT, 0)
+*/
+#define ALL 0xff
+#define COMBO_KEY(name, key_positions, combo_bindings, combo_layers) \
+    / { \
+        combos { \
+            compatible = "zmk,combos"; \
+            combo_ ## name { \
+                timeout-ms = <COMBOS_TERM>; \
+                key-positions = <key_positions>; \
+                bindings = <combo_bindings>; \
+                layers = <combo_layers>; \
+            }; \
+        }; \
+    };
+
+/* Combo for caps_word */
+#if defined (COMBOS_CAPS_WORDS)
+    COMBO_KEY(combo_r_u_caps_word, COMBOS_CAPS_WORDS, &caps_word, U_BASE)
+#endif
+
+/* Combo for ' */
+#if defined (COMBOS_SINGLE_QUOTE)
+    COMBO_KEY(combo_kl_sqt, COMBOS_SINGLE_QUOTE, &kp SQT, U_BASE)
+#endif
+/* Combo for ` */
+#if defined (COMBOS_GRAVE)
+    COMBO_KEY(combo_sd_grave, COMBOS_GRAVE, &kp GRAVE, U_BASE)
+#endif
+
+/* Combo for ESCAPE */
+#if defined (COMBOS_ESCAPE_KEY)
+    COMBO_KEY(combo_b_n_escape, COMBOS_ESCAPE_KEY, &kp ESCAPE, U_BASE)
+#endif
+
+/* Combo for FUN layer */
+#if defined (COMBOS_FUNCTION_LAYER)
+    COMBO_KEY(combo_c_coma_to_layer_function, COMBOS_FUNCTION_LAYER, &to U_FUN, U_BASE U_FUN)
+#endif
