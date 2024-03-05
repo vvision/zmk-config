@@ -15,6 +15,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Use Miryoku logic to build different layers for different boards more easily.
 
+### Fixed
+
+- Use lt rather than hm to trigger the `navigation` layer in the `symbol` layer.     
+
 ## [0.6.2] - 2024-02-18
 
 ### Fixed

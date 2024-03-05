@@ -22,7 +22,7 @@ U_NP,           U_NP,           &kp ESC,        &sk LSHIFT,         &lt U_NAV SP
 &kp AT,        &kp LT,   &kp GT,   &kp DLLR,  &kp PRCNT,      &kp CARET, &kp AMPS, &kp STAR,  &sqt_space,  &grave_space, \
 &kp LBRC,      &kp LPAR, &kp RPAR, &kp RBRC,  &kp EQUAL,      &kp BSLH,  &kp PLUS, &kp MINUS, &kp SLASH,   &dqt_space,   \
 &tilde_space,  &kp LBKT, &kp RBKT, &kp UNDER, &kp HASH,       &kp PIPE,  &kp EXCL, &kp SEMI,  &kp COLON,   &kp QMARK,    \
-U_NP,       U_NP,     &trans,   &trans,    &hm U_NAV TAB,  &trans,    &trans,   &trans,    U_NP,        U_NP
+U_NP,       U_NP,     &trans,   &trans,    &lt U_NAV TAB,  &trans,    &trans,   &trans,    U_NP,        U_NP
 
 // -----------------------------------------------------------------------------------------
 // |  | ESC  | Home |  Up  | End   | PG_UP |   |  =  | 7           | 8          | 9         | -         |  |
