@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.7.0] - 2024-02-xx
 
+### Added
+
+- Add macros to add space after dead keys in the `symbol` layer.
+
 ### Changed
 
 - Use Miryoku logic to build different layers for different boards more easily.
