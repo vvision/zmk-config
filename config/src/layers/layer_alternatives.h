@@ -13,6 +13,19 @@ U_MT(LGUI, A),  U_MT(LALT, S),  U_MT(LCTRL, D), U_MT(LSHIFT, F),    &kp G,      
 &kp Z,          &kp X,          &kp C,          &kp V,              &kp B,             &kp N,         &kp M,            &kp COMMA,      &kp DOT,        &kp FSLH,  \
 U_NP,           U_NP,           &kp ESC,        &sk LSHIFT,         &lt U_NAV SPACE,   &lt U_SYM RET, &kp BSPC,         &kp DEL,        U_NP,           U_NP
 
+// https://ergol.org/
+// -----------------------------------------------------------------------------------------
+// |  | Q         | C         | O          | P           |  W  |   |  J  | M           | D          | DIA       |  F  |  |
+// |  | A -> LGUI | S -> LALT | E -> LCTRL | N -> LSHIFT |  ,  |   |  L  | R -> RSHIFT | T -> RCTRL | I -> RALT |  U  |  |
+// |  | Z         | X         | -          | V           |  B  |   |  .  | H           | G          | Y         |  K  |  |
+//                                | ESC | LSHIFT | SPC -> NAV  |   | ENT -> SYM | BSPC | DEL |
+//
+#define UNICODA_ALTERNATIVES_BASE_ERGOL \
+&kp Q,          &kp C,          &kp O,          &kp P,              &kp W,             &kp J,         &kp M,            &kp D,          &sl U_DIA_ERGOL,  &kp F,     \
+U_MT(LGUI, A),  U_MT(LALT, S),  U_MT(LCTRL, E), U_MT(LSHIFT, N),    &kp COMMA,         &kp L,         U_MT(RSHIFT, R),  U_MT(RCTRL, T), U_MT(RALT, I),    &kp U,   \
+&kp Z,          &kp X,          &kp QMARK,      &kp V,              &kp B,             &kp DOT,       &kp H,            &kp G,          &kp Y,            &kp K,  \
+U_NP,           U_NP,           &kp ESC,        &sk LSHIFT,         &lt U_NAV SPACE,   &lt U_SYM RET, &kp BSPC,         &kp DEL,        U_NP,             U_NP
+
 // -----------------------------------------------------------------------------------------
 // |  | @ | < | > | $ | % |   |  ^  | & | * | ' | ` |  |
 // |  | { | ( | ) | } | = |   |  \  | + | - | / | " |  |
@@ -62,9 +75,21 @@ U_NP,        U_NP,        &trans,      &trans,      &trans,      &trans,        
 // |  |   | é | è |        |   |   |  |             |   |   |  |  |
 // |  | à |   | ê | LSHIFT |   |   |  | û -> RSHIFT | î | ô |  |  |
 // |  | â |   | ç |        |   |   |  |             |   |   |  |  |
-//                              |  |  |  |   |  |  |  |
+//                    |  |  |  |   |  |  |  |
 #define UNICODA_ALTERNATIVES_DIA \
 &none,            &fr_e_acute, &fr_e_grave,      &none,      &none,        &none,  &none,                         &fr_u_grave,      &none,            &none, \
 &fr_a_grave,      &none,       &fr_e_circumflex, &kp LSHIFT, &none,        &none,  &hm_fr_u_circumflex RSHIFT 0,  &fr_i_circumflex, &fr_o_circumflex, &none, \
 &fr_a_circumflex, &none,       &fr_c_cedilla,    &none,      &none,        &none,  &none,                         &none,            &none,            &none, \
 U_NP,             U_NP,        &trans,           &trans,     &trans,       &trans, &trans,                        &trans,           U_NP,             U_NP
+
+
+// -----------------------------------------------------------------------------------------
+// |  | â | ç |   |   |  |   |  |        |   |   | û |  |
+// |  | à | é | è | ê |  |   |  | RSHIFT | î | ï | ù |  |
+// |  |   |   |   |   |  |   |  |        |   |   |   |  |
+//              |  |  |  |   |  |  |  |
+#define UNICODA_ALTERNATIVES_DIA_ERGOL \
+&fr_a_circumflex, &fr_c_cedilla, &fr_e_grave, &none,            &none,        &none,  &none,       &none,            &fr_u_circumflex, &none, \
+&fr_a_grave,      &fr_e_acute,   &fr_e_grave, &fr_e_circumflex, &none,        &none,  &kp RSHIFT,  &fr_i_circumflex, &fr_i_trema,      &fr_u_grave, \
+&none,            &none,         &none,       &none,            &none,        &none,  &none,       &none,            &none,            &none, \
+U_NP,             U_NP,          &trans,      &trans,           &trans,       &trans, &trans,      &trans,           U_NP,             U_NP

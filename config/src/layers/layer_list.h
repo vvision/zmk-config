@@ -18,4 +18,8 @@ MIRYOKU_X(DIA, "Diacritics")
 #define U_ADJUST 4
 #define U_DIA    5
 
+#if defined (MIRYOKU_ALPHAS_ERGOL)
+  #define U_DIA_ERGOL U_DIA
+#endif
+
 #endif
