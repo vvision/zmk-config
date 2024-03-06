@@ -17,10 +17,10 @@
 /* MACROS */
 #define WIN_TEAMS_MUTE LC(LS(M)) // Windows - Teams - Toggle Mute (Should be tested) // Ctrl + Shift + M
 #define WIN_SCR LG(LS(S)) // Windows - Screenshot // Win + Shift + S
-U_MACRO(sqt_space, &kp SQT &kp SPACE)
-U_MACRO(grave_space, &kp SQT &kp SPACE)
-U_MACRO(dqt_space, &kp SQT &kp SPACE)
-U_MACRO(tilde_space, &kp TILDE &kp SPACE)
+U_MACRO(sqt_space, wait-ms = <0>; bindings = <&kp SQT &kp SPACE>;)
+U_MACRO(grave_space, wait-ms = <0>; bindings = <&kp SQT &kp SPACE>;)
+U_MACRO(dqt_space, wait-ms = <0>; bindings = <&kp SQT &kp SPACE>;)
+U_MACRO(tilde_space, wait-ms = <0>; bindings = <&kp TILDE &kp SPACE>;)
 
 HOLD_TAP(hm_fr_u_circumflex, 175, &kp, &fr_u_circumflex)
 
