@@ -22,8 +22,8 @@ U_NP,           U_NP,           &kp ESC,        &sk LSHIFT,         &lt U_NAV SP
 //
 #define UNICODA_ALTERNATIVES_BASE_ERGOL \
 &kp Q,          &kp C,          &kp O,          &kp P,              &kp W,             &kp J,         &kp M,            &kp D,          &sl U_DIA_ERGOL,  &kp F,     \
-U_MT(LGUI, A),  U_MT(LALT, S),  U_MT(LCTRL, E), U_MT(LSHIFT, N),    &kp COMMA,         &kp L,         U_MT(RSHIFT, R),  U_MT(RCTRL, T), U_MT(RALT, I),    &kp U,   \
-&kp Z,          &kp X,          &kp QMARK,      &kp V,              &kp B,             &kp DOT,       &kp H,            &kp G,          &kp Y,            &kp K,  \
+U_MT(LGUI, A),  U_MT(LALT, S),  U_MT(LCTRL, E), U_MT(LSHIFT, N),    &u_comma_semi,     &kp L,         U_MT(RSHIFT, R),  U_MT(RCTRL, T), U_MT(RALT, I),    &kp U,   \
+&kp Z,          &kp X,          &u_minus_qmark, &kp V,              &kp B,             &u_dot_colon,  &kp H,            &kp G,          &kp Y,            &kp K,  \
 U_NP,           U_NP,           &kp ESC,        &sk LSHIFT,         &lt U_NAV SPACE,   &lt U_SYM RET, &kp BSPC,         &kp DEL,        U_NP,             U_NP
 
 // -----------------------------------------------------------------------------------------

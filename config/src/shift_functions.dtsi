@@ -30,3 +30,9 @@ SHIFT_FUNCTION(u_caps_word, &caps_word, &kp CAPS)
 
 // Triggers errors in build with Zephyr 3.5
 // SHIFT_FUNCTION(u_ep_tog, &ext_power EP_TOG, &ext_power EP_OFF)
+
+#if defined (MIRYOKU_ALPHAS_ERGOL)
+  SHIFT_MACRO(u_minus_qmark, &kp MINUS, &kp QMARK)
+  SHIFT_MACRO(u_comma_semi, &kp COMMA, &kp SEMICOLON)
+  SHIFT_MACRO(u_dot_colon, &kp DOT, &kp COLON)
+#endif
