@@ -8,7 +8,7 @@ DIACRITIC_LETTER(fr_e_grave, GRAVE, E)
 DIACRITIC_LETTER(fr_e_circumflex, CARET, E)
 
 DIACRITIC_LETTER(fr_i_circumflex, CARET, I)
-DIACRITIC_LETTER(fr_i_trema, DOUBLE_QUOTE, I)
+DIACRITIC_LETTER(fr_i_trema, DOUBLE_QUOTES, I)
 
 DIACRITIC_LETTER(fr_o_circumflex, CARET, O)
 
