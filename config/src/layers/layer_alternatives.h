@@ -38,15 +38,15 @@ U_NP,           U_NP,           &kp ESC,        &sk LSHIFT,         &lt U_NAV SP
 U_NP,       U_NP,     &trans,   &trans,    &lt U_NAV TAB,  &trans,    &trans,   &trans,    U_NP,        U_NP
 
 // -----------------------------------------------------------------------------------------
-// |  | ESC  | Home |  Up  | End   | PG_UP |   |  =  | 7           | 8          | 9         | -         |  |
-// |  | TAB -> LGUI | Left | Down | Right | PG_DN |   |  *  | 4 -> RSHIFT | 5 -> RCTRL | 6 -> RALT | + -> RGUI |  |
-// |  | Undo | Cut  | Copy | Paste |  Del  |   |  0  | 1           | 2          | 3         | .         |  |
-//                                    |  |  |  |   |  |  |  |
+// |  | ESC         | Home |  Up  | End   | PG_UP |   |  +  | 7           | 8          | 9         | *         |  |
+// |  | TAB -> LGUI | Left | Down | Right | PG_DN |   |  -  | 4 -> RSHIFT | 5 -> RCTRL | 6 -> RALT | 0 -> RGUI |  |
+// |  | Undo        | Cut  | Copy | Paste |  Del  |   |  =  | 1           | 2          | 3         | /         |  |
+//                                       |  |  |  |   |  |  | . |
 #define UNICODA_ALTERNATIVES_NAV \
-&kp ESC,       &kp HOME,  &kp UP,    &kp END,    &kp PG_UP,    &kp EQUAL, &kp N7,         &kp N8,       &kp N9,      &kp MINUS,      \
-&hm LGUI TAB,  &kp LEFT,  &kp DOWN,  &kp RIGHT,  &kp PG_DN,    &kp STAR,  &hm RSHIFT N4,  &hm RCTRL N5, &hm RALT N6, &hm RGUI PLUS,  \
-&kp LC(Z),     &kp LC(X), &kp LC(C), &kp LC(V),  &kp DEL,      &kp N0,    &kp N1,         &kp N2,       &kp N3,      &kp DOT,        \
-U_NP,          U_NP,      &trans,    &trans,     &trans,       &trans,    &trans,         &trans,       U_NP,        U_NP
+&kp ESC,       &kp HOME,  &kp UP,    &kp END,    &kp PG_UP,    &kp PLUS,  &kp N7,         &kp N8,       &kp N9,      &kp STAR,      \
+&hm LGUI TAB,  &kp LEFT,  &kp DOWN,  &kp RIGHT,  &kp PG_DN,    &kp MINUS, &hm RSHIFT N4,  &hm RCTRL N5, &hm RALT N6, &hm RGUI N0,  \
+&kp LC(Z),     &kp LC(X), &kp LC(C), &kp LC(V),  &kp DEL,      &kp EQUAL, &kp N1,         &kp N2,       &kp N3,      &kp SLASH,        \
+U_NP,          U_NP,      &trans,    &trans,     &trans,       &trans,    &trans,         &kp DOT,       U_NP,        U_NP
 
 
 // -----------------------------------------------------------------------------------------
