@@ -5,16 +5,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.7.0] - 2024-02-xx
+## [0.7.0] - 2024-03-17
 
 ### Added
 
 - Add macros to add space after dead keys in the `symbol` layer.
 - Add ergol layout as another possible `base` layer.
+- Declare shift macro for the ergol layer.
+- Add home row mods in the `symbol` layer.
 
 ### Changed
 
 - Use Miryoku logic to build different layers for different boards more easily.
+- Move number 0 key on outer right home row.
 
 ### Fixed
 
