@@ -23,6 +23,7 @@ U_MACRO(dqt_space, wait-ms = <0>; bindings = <&kp DQT &kp SPACE>;)
 U_MACRO(tilde_space, wait-ms = <0>; bindings = <&kp TILDE &kp SPACE>;)
 
 HOLD_TAP(hm_fr_u_circumflex, 175, &kp, &fr_u_circumflex)
+HOLD_TAP(hm_dqt_space, 175, &kp, &dqt_space)
 
 DOUBLE_TAP(dt_next_prev, 200, &kp C_NEXT, &kp C_PREV)
 
