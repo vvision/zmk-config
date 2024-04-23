@@ -11,6 +11,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Add macros to switch virtual desktop on Windows in the `adjust` layer.
 - Add reset and bootloader keys on both keyboard split in the `adjust` layer.
+- Add combo on s, d and f key in qwerty for the `TAB` key in `base` layer.
+  Inspired by P.Coves keymap.
+
+### Changed
+
+- Move `ESCAPE` combo to d and f in qwerty in `base` layer.
 
 ## [0.7.0] - 2024-03-17
 
