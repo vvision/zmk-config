@@ -22,8 +22,8 @@ XXX  K20  K21  K22  K23  K24       K25  K26  K27  K28  K29  XXX \
 #define COMBOS_GRAVE 14 15
 /* Hold D and F for ESCAPE (in qwerty) */
 #define COMBOS_ESCAPE_KEY 15 16
-/* Hold S, D and F for TAB (in qwerty) */
-#define COMBOS_TAB_KEY 14 15 16
+/* Hold S and F for TAB (in qwerty) */
+#define COMBOS_TAB_KEY 14 16
 
 /* Hold K and L for ' (in qwerty) */
 #define COMBOS_SINGLE_QUOTE 20 21
