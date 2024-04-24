@@ -18,15 +18,8 @@
         }; \
     };
 
-/* Combo for caps_word */
-#if defined (COMBOS_CAPS_WORDS)
-    COMBO_KEY(combo_r_u_caps_word, COMBOS_CAPS_WORDS, &caps_word, U_BASE)
-#endif
+/* LEFT part combo */
 
-/* Combo for ' */
-#if defined (COMBOS_SINGLE_QUOTE)
-    COMBO_KEY(combo_kl_sqt, COMBOS_SINGLE_QUOTE, &kp SQT, U_BASE)
-#endif
 /* Combo for ` */
 #if defined (COMBOS_GRAVE)
     COMBO_KEY(combo_sd_grave, COMBOS_GRAVE, &kp GRAVE, U_BASE)
@@ -40,6 +33,27 @@
 /* Combo for TAB */
 #if defined (COMBOS_TAB_KEY)
     COMBO_KEY(combo_s_d_f_escape, COMBOS_TAB_KEY, &kp TAB, U_BASE)
+#endif
+
+
+/* RIGHT part combo */
+
+/* Combo for ' */
+#if defined (COMBOS_SINGLE_QUOTE)
+    COMBO_KEY(combo_kl_sqt, COMBOS_SINGLE_QUOTE, &kp SQT, U_BASE)
+#endif
+
+/* Combo for BACKSPACE */
+#if defined (COMBOS_BACKSPACE)
+    COMBO_KEY(combo_jk_backspace, COMBOS_BACKSPACE, &kp BSPC, U_BASE)
+#endif
+
+
+/* BOTH part combo */
+
+/* Combo for caps_word */
+#if defined (COMBOS_CAPS_WORDS)
+    COMBO_KEY(combo_r_u_caps_word, COMBOS_CAPS_WORDS, &caps_word, U_BASE)
 #endif
 
 /* Combo for FUN layer */

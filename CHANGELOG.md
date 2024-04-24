@@ -13,6 +13,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add reset and bootloader keys on both keyboard split in the `adjust` layer.
 - Add combo on s and f key in qwerty for the `TAB` key in `base` layer.
   Inspired by P.Coves keymap.
+- [Experimental] Add combo on j and k key in qwerty for the `BACKSPACE` key in `base` layer.
+  Inspired by P.Coves keymap.
 
 ### Changed
 
