@@ -38,15 +38,15 @@ U_MT(LGUI, LBRC), U_MT(LALT, LPAR), U_MT(LCTRL, RPAR), U_MT(LSHIFT, RBRC),  &kp 
 U_NP,             U_NP,             &trans,            &trans,              &lt U_NAV TAB,  &trans,    &trans,             &trans,             U_NP,              U_NP
 
 // -----------------------------------------------------------------------------------------
-// |  | ESC         | Home |  Up  | End   | PG_UP |   |      |      |    |       |      |  |
-// |  | TAB -> LGUI | Left | Down | Right | PG_DN |   | Left | Down | Up | Right | RGUI |  |
-// |  | Undo        | Cut  | Copy | Paste |  Del  |   |      |      |    |       |      |  |
-//                                       |  |  |  |   |  |  | . |
+// |  | ESC         | Home |  Up  | End   | PG_UP |   |      |      |    |       |        |  |
+// |  | TAB -> LGUI | Left | Down | Right | PG_DN |   | Left | Down | Up | Right | RCTRL  |  |
+// |  | Undo        | Cut  | Copy | Paste |  Del  |   |      |      |    | RGUI  | RSHIFT |  |
+//                         |      |       |       |   |      | RALT |    |
 #define UNICODA_ALTERNATIVES_NAV \
 &kp ESC,       &kp HOME,  &kp UP,    &kp END,    &kp PG_UP,    U_NU,      U_NU,     U_NU,    U_NU,      U_NU,     \
-&hm LGUI TAB,  &kp LEFT,  &kp DOWN,  &kp RIGHT,  &kp PG_DN,    &kp LEFT,  &kp DOWN, &kp UP,  &kp RIGHT, &kp RGUI, \
-&kp LC(Z),     &kp LC(X), &kp LC(C), &kp LC(V),  &kp DEL,      U_NU,      U_NU,     U_NU,    U_NU,      U_NU,     \
-U_NP,          U_NP,      &trans,    &trans,     &trans,       &trans,    &trans,   &trans,  U_NP,      U_NP
+&hm LGUI TAB,  &kp LEFT,  &kp DOWN,  &kp RIGHT,  &kp PG_DN,    &kp LEFT,  &kp DOWN, &kp UP,  &kp RIGHT, &kp RCTRL, \
+&kp LC(Z),     &kp LC(X), &kp LC(C), &kp LC(V),  &kp DEL,      U_NU,      U_NU,     U_NU,    &kp RGUI,  &kp RSHIFT,     \
+U_NP,          U_NP,      &trans,    &trans,     &trans,       &trans,    &kp RALT, &trans,  U_NP,      U_NP
 
 
 // -----------------------------------------------------------------------------------------
@@ -56,7 +56,7 @@ U_NP,          U_NP,      &trans,    &trans,     &trans,       &trans,    &trans
 //                                       |  |  |  |   |  |  | . |
 #define UNICODA_ALTERNATIVES_NUM \
 &kp N1,    &kp N2,   &kp N3,    &kp N4,      &kp N5,  &kp N6,    &kp N7,         &kp N8,       &kp N9,      &kp N0,      \
-&kp LGUI,  &kp LALT, &kp RCTRL, &KP LSHIFT,  U_NU,    &kp MINUS, &hm RSHIFT N4,  &hm RCTRL N5, &hm RALT N6, &hm RGUI N0, \
+&kp LGUI,  &kp LALT, &kp LCTRL, &kp LSHIFT,  U_NU,    &kp MINUS, &hm RSHIFT N4,  &hm RCTRL N5, &hm RALT N6, &hm RGUI N0, \
 U_NU,      U_NU,     U_NU,      U_NU,        U_NU,    &kp EQUAL, &kp N1,         &kp N2,       &kp N3,      &kp SLASH,   \
 U_NP,      U_NP,     &trans,    &trans,      &trans,  &trans,    &trans,         &kp DOT,      U_NP,        U_NP
 
