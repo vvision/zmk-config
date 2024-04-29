@@ -10,14 +10,19 @@ Uses [ZMK](https://zmk.dev/) with [nice!nano](https://nicekeyboards.com/nice-nan
 
 1. QWERTY: Base qwerty layout with home row mods.
 2. SYMBOL: All symbols and numbers, with a focus of recurring symbols used in programmation.
-3. DIACRITICS: Diacritics for French language. 
-4. NAVIGATION: Arrows (pad style) and other helpers (Copy/Paste, Insert/Delete, ...). Right side with numpad.
-5. FUNCTIONS: Left side with function keys from F1 to F12. 
-6. ADJUST: Bluetooth + Volume + Media + available space for shortcuts/macro.
+3. NUMBERS: Num row on top, numpad on the right side.
+4. DIACRITICS: Diacritics for French language. 
+5. NAVIGATION: Arrows (pad style) and other helpers (Copy/Paste, Insert/Delete, ...). Right side with vim arrow keys.
+6. FUNCTIONS: Left side with function keys from F1 to F12. 
+7. ADJUST: Bluetooth + Volume + Media + available space for shortcuts/macro.
 
 ## Visualisation
 
 To view all layouts in a graphical way, use [keymap-drawer](https://keymap-drawer.streamlit.app/) (Also available on [GitHub](https://github.com/caksoylar/keymap-drawer)).
+
+Other interesting tools:
+* [keyboard-layout-editor.com](http://www.keyboard-layout-editor.com/#/).
+* [Corne keymap-editor](https://nickcoutsos.github.io/keymap-editor/)
 
 ## Resources
 
@@ -27,7 +32,8 @@ To view all layouts in a graphical way, use [keymap-drawer](https://keymap-drawe
 
 ### Inspiration
 
-- [Miryoku Reference Manual](https://github.com/manna-harbour/miryoku/tree/master/docs/reference) for layers and home row mods and [Miryoku ZMK](https://github.com/manna-harbour/miryoku_zmk) for implementation.
+- [Miryoku Reference Manual](https://github.com/manna-harbour/miryoku/tree/master/docs/reference) for layers
+  and home row mods and [Miryoku ZMK](https://github.com/manna-harbour/miryoku_zmk) for implementation.
 - [QWERTY Lafayette 42](https://qwerty-lafayette.org/42), [Ergo-L](https://ergol.org/) for `symbol` layer and diacritics.
 - [arsenik](https://github.com/OneDeadKey/arsenik), [shaka34](https://github.com/lobre/shaka34) for `navigation` layer.
 

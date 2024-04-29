@@ -15,10 +15,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   Inspired by P.Coves keymap.
 - [Experimental] Add combo on j and k key in qwerty for the `BACKSPACE` key in `base` layer.
   Inspired by P.Coves keymap.
+- Add num row in `numbers` layer.
+- Add vim arrow keys in `navigation` layer.
 
 ### Changed
 
 - Move `ESCAPE` combo to d and f in qwerty in `base` layer.
+- Move numbers in their own `numbers`.
 
 ## [0.7.0] - 2024-03-17
 
