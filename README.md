@@ -32,10 +32,11 @@ Other interesting tools:
 
 ### Inspiration
 
-- [Miryoku Reference Manual](https://github.com/manna-harbour/miryoku/tree/master/docs/reference) for layers
-  and home row mods and [Miryoku ZMK](https://github.com/manna-harbour/miryoku_zmk) for implementation.
-- [QWERTY Lafayette 42](https://qwerty-lafayette.org/42), [Ergo-L](https://ergol.org/) for `symbol` layer and diacritics.
+- [Miryoku Reference Manual](https://github.com/manna-harbour/miryoku/tree/master/docs/reference) for general layers and home row mods.
+- [Miryoku ZMK](https://github.com/manna-harbour/miryoku_zmk) for implementation and code split.
+- [QWERTY Lafayette 42](https://qwerty-lafayette.org/42), [Ergo-L](https://ergol.org/) for `symbol` layer and `diacritics` layer.
 - [arsenik](https://github.com/OneDeadKey/arsenik), [shaka34](https://github.com/lobre/shaka34) for `navigation` layer.
+- [selenium33](https://github.com/OneDeadKey/arsenik/tree/main/mods/selenium33) for `number` layer.
 
 ### Reading
 
