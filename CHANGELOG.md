@@ -16,7 +16,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [Experimental] Add combo on j and k key in qwerty for the `BACKSPACE` key in `base` layer.
   Inspired by P.Coves keymap.
 - Add num row in `numbers` layer.
-- Add vim arrow keys in `navigation` layer.
+  Inspired by selenium33.
+- Add vim arrow keys in another `navigation` layer (unused for now).
 
 ### Changed
 
