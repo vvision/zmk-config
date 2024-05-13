@@ -6,15 +6,29 @@ Based on the Aurora Corne from [splitkb](https://splitkb.com).
 
 Uses [ZMK](https://zmk.dev/) with [nice!nano](https://nicekeyboards.com/nice-nano).
 
-## Layouts
+It should used be in combination with the `US International` language, as it makes heavy uses of dead keys for diacritics.
 
-1. QWERTY: Base qwerty layout with home row mods.
-2. SYMBOL: All symbols and numbers, with a focus of recurring symbols used in programmation.
-3. NUMBERS: Num row on top, numpad on the right side.
-4. DIACRITICS: Diacritics for French language. 
-5. NAVIGATION: Arrows (pad style) and other helpers (Copy/Paste, Insert/Delete, ...). Right side with vim arrow keys.
-6. FUNCTIONS: Left side with function keys from F1 to F12. 
+## Layers
+
+All layers are defined in `config/src/layers/layer_alternatives.h` for reusability between keyboards with different number of keys.
+
+### Base layers
+
+1. BASE_QWERTY: Base qwerty layout with home row mods.
+2. SYM: All symbols with a focus of recurring symbols used in programmation. Based on [Lafayette 42](https://qwerty-lafayette.org/42) symbol layer.
+3. NAV_NUM: Arrows (pad style) and other helpers (Copy/Paste, Insert/Delete, ...). Right side with numpad.
+4. NUM_ROW: A number layer inspired by [selenium33](https://github.com/OneDeadKey/arsenik/tree/main/mods/selenium33#numrow--numpad), with numbers on the home row and shifted symbols just above.
+5. DIACRITICS: Diacritics for French language.
+6. FUNCTIONS: Right side with function keys from F1 to F12, F1 to F9 in the same position as a numpad.
 7. ADJUST: Bluetooth + Volume + Media + available space for shortcuts/macro.
+
+### Optional layers
+
+These layers are defined, but not currently used.
+
+* BASE_ERGOL: Base ergol layer with home row mods. A layer optimized for the french language.
+* NAV_VIM_EXT: A navigation layer inspired by [selenium33](https://github.com/OneDeadKey/arsenik/tree/main/mods/selenium33#extended-navigation), with vim style arrow keys.
+* DIA_ERGOL: Diacritics layer for the ergol layer.
 
 ## Visualisation
 
