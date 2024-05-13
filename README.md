@@ -55,7 +55,9 @@ Other interesting tools:
 ### Reading
 
 - [A guide to home row mods](https://precondition.github.io/home-row-mods#putting-home-row-mods-on-almost-all-layers)
-- [36 keys is enough](https://pcoves.gitlab.io/en/blog/keyboard-36-keys/)
+- P. Coves Blog:
+[36 keys is enough](https://pcoves.gitlab.io/en/blog/keyboard-36-keys/) followed by
+[I was wrong: 36 is too much](https://pcoves.gitlab.io/en/blog/i-was-wrong-36-keys-is-way-too-much/)
 - [5x3_3 Keyboard Layout](https://evantravers.com/articles/2023/05/27/5x3-3-keyboard-layout/#fn1) - [Source](https://github.com/evantravers/zmk-config/blob/master/config/corneish_zen.keymap)
 - [Programming On 34 Keys](https://peppe.rs/posts/programming_on_34_keys/)
 - [Seniply](https://stevep99.github.io/seniply/)
