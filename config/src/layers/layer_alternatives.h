@@ -9,8 +9,8 @@
 //
 #define UNICODA_ALTERNATIVES_BASE_QWERTY \
 &kp Q,          &kp W,          &kp E,          &kp R,              &kp T,             &kp Y,         &kp U,            &kp I,          &kp O,          &kp P,     \
-U_MT(LGUI, A),  U_MT(LALT, S),  U_MT(LCTRL, D), U_MT(LSHIFT, F),    &kp G,             &kp H,         U_MT(RSHIFT, J),  U_MT(RCTRL, K), U_MT(RALT, L),  &sl U_DIA,   \
-&kp Z,          &kp X,          &kp C,          &kp V,              &kp B,             &kp N,         &kp M,            &kp COMMA,      &kp DOT,        &kp FSLH,  \
+U_MT(LGUI, A),  U_MT(LALT, S),  U_MT(LCTRL, D), U_MT(LSHIFT, F),    &kp G,             &kp H,         U_MT(RSHIFT, J),  U_MT(RCTRL, K), U_MT(RALT, L),  &sl U_DIA, \
+&kp Z,          &kp X,          &kp C,          &kp V,              &kp B,             &kp N,         &kp M,            &u_comma_semi,  &u_dot_colon,   &kp FSLH,  \
 U_NP,           U_NP,           &kp ESC,        &sk LSHIFT,         &lt U_NAV SPACE,   &lt U_SYM RET, &lt U_NUM BSPC,   &kp DEL,        U_NP,           U_NP
 
 // https://ergol.org/
