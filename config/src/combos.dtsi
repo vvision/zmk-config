@@ -60,3 +60,15 @@
 #if defined (COMBOS_FUNCTION_LAYER)
     COMBO_KEY(combo_c_coma_to_layer_function, COMBOS_FUNCTION_LAYER, &to U_FUN, U_BASE U_FUN)
 #endif
+
+/* Combo for multi base layer */
+#if defined (MIRYOKU_MULTIPLE_ALPHAS)
+    #if defined (COMBOS_MULTI_LAYER)
+        // layer switching combos
+        // Inspired by:
+        // https://github.com/PaulDStevenson/anachron-zmk-config-lilly58/blob/f563d1ca5451776c4591294e0a04afa8d917b067/config/lily58.keymap#L482
+        COMBO_KEY(base_to_ergol, COMBOS_MULTI_LAYER, &to U_BASE_ERGOL, U_BASE)
+        COMBO_KEY(ergol_to_colemakdh, COMBOS_MULTI_LAYER, &to U_BASE_COLEMAKDH, U_BASE_ERGOL)
+        COMBO_KEY(colemakdh_to_base, COMBOS_MULTI_LAYER, &to U_BASE, U_BASE_COLEMAKDH)
+    #endif
+#endif
