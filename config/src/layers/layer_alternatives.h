@@ -26,6 +26,20 @@ U_MT(LGUI, A),  U_MT(LALT, S),  U_MT(LCTRL, E), U_MT(LSHIFT, N),    &u_comma_sem
 &kp Z,          &kp X,          &u_minus_qmark, &kp V,              &kp B,             &u_dot_colon,  &kp H,            &kp G,          &kp Y,            &kp K,  \
 U_NP,           U_NP,           &kp ESC,        &sk LSHIFT,         &lt U_NAV SPACE,   &lt U_SYM RET, &lt U_NUM BSPC,   &kp DEL,        U_NP,             U_NP
 
+// https://colemakmods.github.io/mod-dh/
+// -----------------------------------------------------------------------------------------
+// |  | Q         | W         | F          | P           |  B  |   |  J  | L           | U          | Y       | ;         |  |
+// |  | A -> LGUI | R -> LALT | S -> LCTRL | T -> LSHIFT |  G  |   |  M  | N -> RSHIFT | E -> RCTRL | I -> RALT | O -> RGUI |  |
+// |  | Z         | X         | C          | D           |  V  |   |  K  | H           | ,          | .         | /         |  |
+//                                | ESC | LSHIFT | SPC -> NAV  |   | ENT -> SYM | BSPC -> NUM | DEL |
+//
+#define UNICODA_ALTERNATIVES_BASE_COLEMAK_DH \
+&kp Q,          &kp W,          &kp F,          &kp P,            &kp B,             &kp J,          &kp L,            &kp U,          &kp Y,          &kp SEMI,      \
+U_MT(LGUI, A),  U_MT(LALT, R),  U_MT(LCTRL, S), U_MT(LSHIFT, T),  &kp G,             &kp M,          U_MT(RSHIFT, N),  U_MT(RCTRL, E), U_MT(RALT, I),  U_MT(RGUI, O), \
+&kp Z,          &kp X,          &kp C,          &kp D,            &kp V,             &kp K,          &kp H,            &kp COMMA,      &kp DOT,        &kp FSLH,      \
+U_NP,           U_NP,           &kp ESC,        &sk LSHIFT,       &lt U_NAV SPACE,   &lt U_SYM RET,  &lt U_NUM BSPC,   &kp DEL,        U_NP,           U_NP
+
+
 // Lafayette/ErgoL AltGr symbols
 // -----------------------------------------------------------------------------------------
 // |  | @ | < | > | $ | % |   |  ^  | & | * | ' | ` |  |
