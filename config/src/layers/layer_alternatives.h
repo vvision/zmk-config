@@ -101,15 +101,15 @@ U_NP,        U_NP,        &trans,       &trans,        &trans,    &trans,    &tr
 U_NP,     U_NP,     &trans,     &to U_BASE, &trans,      &trans,    &to U_BASE, &trans, U_NP,   U_NP
 
 // -----------------------------------------------------------------------------------------
-// |  | BT0     | BT1       | BT2 | BT3                 |   BT4   |   |                |            |       |       |           |  |
-// |  | OUT_TOG | WIN_LDESK |     | WIN_RDESK -> LSHIFT |         |   | Mute           | Play/Pause | Vol - | Vol + | Prev/Next |  |
-// |  | Flash   | Reset     |     |                     | WIN_SCR |   | WIN_TEAMS_MUTE |            |       | Reset |  Flash    |  |
+// |  | BT0     | BT1       |     BT2     | BT3                 |   BT4   |   |                |            |       |       |           |  |
+// |  | OUT_TOG | WIN_LDESK | W_DESK_EXPD | WIN_RDESK -> LSHIFT |         |   | Mute           | Play/Pause | Vol - | Vol + | Prev/Next |  |
+// |  | Flash   | Reset     |             |                     | WIN_SCR |   | WIN_TEAMS_MUTE |            |       | Reset |  Flash    |  |
 //                                   |  |  |  |   |  |  |  |
 #define UNICODA_ALTERNATIVES_ADJUST \
-&u_bt_sel_0, &u_bt_sel_1,   &u_bt_sel_2, &u_bt_sel_3,              &u_bt_sel_4, &none,              &none,             &none,         &none,         &none, \
-&u_out_tog,  &kp WIN_LDESK, &none,       U_MT(LSHIFT, WIN_RDESK),  &none,       &kp K_MUTE,         &kp C_PLAY_PAUSE,  &kp C_VOL_DN,  &kp C_VOL_UP,  &dt_next_prev, \
-&bootloader, &sys_reset,    &none,       &none,                    &kp WIN_SCR, &kp WIN_TEAMS_MUTE, &none,             &none,         &sys_reset,    &bootloader,    \
-U_NP,        U_NP,          &trans,      &trans,                   &trans,      &trans,             &trans,            &trans,        U_NP,          U_NP
+&u_bt_sel_0, &u_bt_sel_1,   &u_bt_sel_2,     &u_bt_sel_3,              &u_bt_sel_4, &none,              &none,             &none,         &none,         &none, \
+&u_out_tog,  &kp WIN_LDESK, &kp W_DESK_EXPD, U_MT(LSHIFT, WIN_RDESK),  &none,       &kp K_MUTE,         &kp C_PLAY_PAUSE,  &kp C_VOL_DN,  &kp C_VOL_UP,  &dt_next_prev, \
+&bootloader, &sys_reset,    &none,           &none,                    &kp WIN_SCR, &kp WIN_TEAMS_MUTE, &none,             &none,         &sys_reset,    &bootloader,    \
+U_NP,        U_NP,          &trans,          &trans,                   &trans,      &trans,             &trans,            &trans,        U_NP,          U_NP
 
 // -----------------------------------------------------------------------------------------
 // |  |   | é | è |        |   |   |  |             |   |   |  |  |
