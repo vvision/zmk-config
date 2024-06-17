@@ -53,15 +53,15 @@ U_MT(LGUI, LBRC), U_MT(LALT, LPAR), U_MT(LCTRL, RPAR), U_MT(LSHIFT, RBRC),  &kp 
 U_NP,             U_NP,             &trans,            &trans,              &lt U_NAV TAB,  &trans,    &trans,             &trans,             U_NP,              U_NP
 
 // -----------------------------------------------------------------------------------------
-// |  | ESC         | Home |  Up  | End   | PG_UP |   |     | 7           | 8          | 9         |           |  |
-// |  | TAB -> LGUI | Left | Down | Right | PG_DN |   | ENT | 4 -> RSHIFT | 5 -> RCTRL | 6 -> RALT | 0 -> RGUI |  |
-// |  | Undo        | Cut  | Copy | Paste |  Del  |   |     | 1           | 2          | 3         | INS       |  |
-//                                       |  |  |  |   |  |  | . |
+// |  | ESC         | Home |  Up  | End   | PG_UP |   |      | 7           | 8          | 9         |           |  |
+// |  | TAB -> LGUI | Left | Down | Right | PG_DN |   | ENT  | 4 -> RSHIFT | 5 -> RCTRL | 6 -> RALT | 0 -> RGUI |  |
+// |  | Undo        | Cut  | Copy | Paste |  Del  |   | BSPC | 1           | 2          | 3         | INS       |  |
+//                                       |  |  |  |   |      |  | . |
 #define UNICODA_ALTERNATIVES_NAV_NUM \
-&kp ESC,       &kp HOME,  &kp UP,    &kp END,    &kp PG_UP,    U_NU,    &kp N7,         &kp N8,       &kp N9,      U_NU,         \
-&hm LGUI TAB,  &kp LEFT,  &kp DOWN,  &kp RIGHT,  &kp PG_DN,    &kp RET, &hm RSHIFT N4,  &hm RCTRL N5, &hm RALT N6, &hm RGUI N0,  \
-&kp LC(Z),     &kp LC(X), &kp LC(C), &kp LC(V),  &kp DEL,      U_NU,    &kp N1,         &kp N2,       &kp N3,      &kp INS,      \
-U_NP,          U_NP,      &trans,    &trans,     &trans,       &trans,    &trans,         &kp DOT,      U_NP,        U_NP
+&kp ESC,       &kp HOME,  &kp UP,    &kp END,    &kp PG_UP,    U_NU,     &kp N7,         &kp N8,       &kp N9,      U_NU,         \
+&hm LGUI TAB,  &kp LEFT,  &kp DOWN,  &kp RIGHT,  &kp PG_DN,    &kp RET,  &hm RSHIFT N4,  &hm RCTRL N5, &hm RALT N6, &hm RGUI N0,  \
+&kp LC(Z),     &kp LC(X), &kp LC(C), &kp LC(V),  &kp DEL,      &kp BSPC, &kp N1,         &kp N2,       &kp N3,      &kp INS,      \
+U_NP,          U_NP,      &trans,    &trans,     &trans,       &trans,   &trans,         &kp DOT,      U_NP,        U_NP
 
 // Inspired by selenium33: https://github.com/OneDeadKey/arsenik/tree/main/mods/selenium33#extended-navigation
 // -----------------------------------------------------------------------------------------
