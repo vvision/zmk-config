@@ -78,3 +78,4 @@ Other interesting tools:
 #### Not tested
 
 - [Keyzen-Colemak](http://first20hours.github.io/keyzen-colemak/)
+- [ridingintraffic/zmk-config-skeledong - how to pair multiple skeletyl boards to a single dongle.](https://github.com/ridingintraffic/zmk-config-skeledong)
