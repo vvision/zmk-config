@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.8.0] - 2024-04-xx
+## [0.8.0] - 2024-0x-xx
 
 ### Added
 
@@ -18,11 +18,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add num row in `numbers` layer.
   Inspired by selenium33.
 - Add vim arrow keys in another `navigation` layer (unused for now).
+- Add return and insert keys on the numpad side of the `navigation` layer.
+- Implement a multi `base` layer system to be able to cycle through different base layer using a combo.
+- Add key to expand virtual desktops on Windows in the `adjust` layer.
+- Add backspace key in `navigation` layer.
 
 ### Changed
 
 - Move `ESCAPE` combo to d and f in qwerty in `base` layer.
-- Move numbers in their own `numbers`.
+- Replace `<` with `;` on `shift + ,` in the `qwerty` layer.
+- Replace `<` with `:` on `shift + .` in the `qwerty` layer.
 
 ## [0.7.0] - 2024-03-17
 

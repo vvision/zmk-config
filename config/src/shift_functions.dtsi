@@ -34,6 +34,6 @@ SHIFT_FUNCTION(u_caps_word, &caps_word, &kp CAPS)
 SHIFT_MACRO(u_comma_semi, &kp COMMA, &kp SEMICOLON)
 SHIFT_MACRO(u_dot_colon, &kp DOT, &kp COLON)
 
-#if defined (MIRYOKU_ALPHAS_ERGOL)
+#if defined (MIRYOKU_ALPHAS_ERGOL) || defined (MIRYOKU_MULTIPLE_ALPHAS)
   SHIFT_MACRO(u_minus_qmark, &kp MINUS, &kp QMARK)
 #endif

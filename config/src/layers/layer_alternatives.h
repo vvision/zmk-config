@@ -56,12 +56,12 @@ U_NP,             U_NP,             &trans,            &trans,              &lt 
 // |  | ESC         | Home |  Up  | End   | PG_UP |   |  /  | 7           | 8          | 9         |           |  |
 // |  | TAB -> LGUI | Left | Down | Right | PG_DN |   |  -  | 4 -> RSHIFT | 5 -> RCTRL | 6 -> RALT | 0 -> RGUI |  |
 // |  | Undo        | Cut  | Copy | Paste |  Del  |   |  ,  | 1           | 2          | 3         | .       |  |
-//                                       |  |  |  |   |  |  | . |
+//                                       |  |  |  |   |  |  |  |
 #define UNICODA_ALTERNATIVES_NAV_NUM \
 &kp ESC,       &kp HOME,  &kp UP,    &kp END,    &kp PG_UP,    &kp SLASH, &kp N7,         &kp N8,       &kp N9,      U_NU,         \
 &hm LGUI TAB,  &kp LEFT,  &kp DOWN,  &kp RIGHT,  &kp PG_DN,    &kp MINUS, &hm RSHIFT N4,  &hm RCTRL N5, &hm RALT N6, &hm RGUI N0,  \
 &kp LC(Z),     &kp LC(X), &kp LC(C), &kp LC(V),  &kp DEL,      &kp COMMA, &kp N1,         &kp N2,       &kp N3,      &kp DOT,      \
-U_NP,          U_NP,      &trans,    &trans,     &trans,       &trans,    &trans,         &kp DOT,      U_NP,        U_NP
+U_NP,          U_NP,      &trans,    &trans,     &trans,       &trans,    &trans,         &trans,       U_NP,        U_NP
 
 // Inspired by selenium33: https://github.com/OneDeadKey/arsenik/tree/main/mods/selenium33#extended-navigation
 // -----------------------------------------------------------------------------------------
@@ -101,15 +101,15 @@ U_NP,        U_NP,        &trans,       &trans,        &trans,    &trans,    &tr
 U_NP,     U_NP,     &trans,     &to U_BASE, &trans,      &trans,    &to U_BASE, &trans, U_NP,   U_NP
 
 // -----------------------------------------------------------------------------------------
-// |  | BT0     | BT1       | BT2 | BT3                 |   BT4   |   |                |            |       |       |           |  |
-// |  | OUT_TOG | WIN_LDESK |     | WIN_RDESK -> LSHIFT |         |   | Mute           | Play/Pause | Vol - | Vol + | Prev/Next |  |
-// |  | Flash   | Reset     |     |                     | WIN_SCR |   | WIN_TEAMS_MUTE |            |       | Reset |  Flash    |  |
+// |  | BT0     | BT1       |     BT2     | BT3                 |   BT4   |   |                |            |       |       |           |  |
+// |  | OUT_TOG | WIN_LDESK | W_DESK_EXPD | WIN_RDESK -> LSHIFT |         |   | Mute           | Play/Pause | Vol - | Vol + | Prev/Next |  |
+// |  | Flash   | Reset     |             |                     | WIN_SCR |   | WIN_TEAMS_MUTE |            |       | Reset |  Flash    |  |
 //                                   |  |  |  |   |  |  |  |
 #define UNICODA_ALTERNATIVES_ADJUST \
-&u_bt_sel_0, &u_bt_sel_1,   &u_bt_sel_2, &u_bt_sel_3,              &u_bt_sel_4, &none,              &none,             &none,         &none,         &none, \
-&u_out_tog,  &kp WIN_LDESK, &none,       U_MT(LSHIFT, WIN_RDESK),  &none,       &kp K_MUTE,         &kp C_PLAY_PAUSE,  &kp C_VOL_DN,  &kp C_VOL_UP,  &dt_next_prev, \
-&bootloader, &sys_reset,    &none,       &none,                    &kp WIN_SCR, &kp WIN_TEAMS_MUTE, &none,             &none,         &sys_reset,    &bootloader,    \
-U_NP,        U_NP,          &trans,      &trans,                   &trans,      &trans,             &trans,            &trans,        U_NP,          U_NP
+&u_bt_sel_0, &u_bt_sel_1,   &u_bt_sel_2,     &u_bt_sel_3,              &u_bt_sel_4, &none,              &none,             &none,         &none,         &none, \
+&u_out_tog,  &kp WIN_LDESK, &kp W_DESK_EXPD, U_MT(LSHIFT, WIN_RDESK),  &none,       &kp K_MUTE,         &kp C_PLAY_PAUSE,  &kp C_VOL_DN,  &kp C_VOL_UP,  &dt_next_prev, \
+&bootloader, &sys_reset,    &none,           &none,                    &kp WIN_SCR, &kp WIN_TEAMS_MUTE, &none,             &none,         &sys_reset,    &bootloader,    \
+U_NP,        U_NP,          &trans,          &trans,                   &trans,      &trans,             &trans,            &trans,        U_NP,          U_NP
 
 // -----------------------------------------------------------------------------------------
 // |  |   | é | è |        |   |   |  |             |   |   |  |  |

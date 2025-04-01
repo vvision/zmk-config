@@ -41,6 +41,11 @@ XXX  K20  K21  K22  K23  K24       K25  K26  K27  K28  K29  XXX \
 #define COMBOS_FUNCTION_LAYER 27 32
 
 
+/* Combo for multi base layer */
+#define MIRYOKU_MULTIPLE_ALPHAS
+/* Hold Q and P to change base layer (in qwerty) */
+#define COMBOS_MULTI_LAYER 1 10
+
 #endif
 
 #define MIRYOKU_MAPPING MIRYOKU_LAYOUTMAPPING_CORNE

@@ -19,6 +19,7 @@
 #define WIN_SCR LG(LS(S)) // Windows - Screenshot // Win + Shift + S
 #define WIN_LDESK RC(LG(LEFT)) // Windows - Switch to left virtual desktop // Ctrl + Win + Left
 #define WIN_RDESK RC(LG(RIGHT)) // Windows - Switch to right virtual desktop // Ctrl + Win + Right
+#define W_DESK_EXPD LG(RIGHT) // Windows - Expand virtual desktop // Win + Tab
 
 U_MACRO(sqt_space, wait-ms = <0>; bindings = <&kp SQT &kp SPACE>;)
 U_MACRO(grave_space, wait-ms = <0>; bindings = <&kp GRAVE &kp SPACE>;)
