@@ -42,12 +42,12 @@ U_NP,           U_NP,           &kp ESC,        &sk LSHIFT,       &lt U_NAV SPAC
 
 // Lafayette/ErgoL AltGr symbols
 // -----------------------------------------------------------------------------------------
-// |  | @ | < | > | $ | % |   |  ^  | & | * | ' | ` |  |
+// |  | ^ | < | > | $ | % |   |  @  | & | * | ' | ` |  |
 // |  | { | ( | ) | } | = |   |  \  | + | - | / | " |  |
 // |  | ~ | [ | ] | _ | # |   | "|" | ! | ; | : | ? |  |
 //     |  |  | TAB -> NAV |   |  |  |  |
 #define UNICODA_ALTERNATIVES_SYM \
-&kp AT,           &kp LT,           &kp GT,            &kp DLLR,            &kp PRCNT,      &kp CARET, &kp AMPS,           &kp STAR,           &sqt_space,        &grave_space, \
+&kp CARET,        &kp LT,           &kp GT,            &kp DLLR,            &kp PRCNT,      &kp AT,    &kp AMPS,           &kp STAR,           &sqt_space,        &grave_space, \
 U_MT(LGUI, LBRC), U_MT(LALT, LPAR), U_MT(LCTRL, RPAR), U_MT(LSHIFT, RBRC),  &kp EQUAL,      &kp BSLH,  U_MT(RSHIFT, PLUS), U_MT(RCTRL, MINUS), U_MT(RALT, SLASH), &hm_dqt_space RGUI 0,   \
 &tilde_space,     &kp LBKT,         &kp RBKT,          &kp UNDER,           &kp HASH,       &kp PIPE,  &kp EXCL,           &kp SEMI,           &kp COLON,         &kp QMARK,    \
 U_NP,             U_NP,             &trans,            &trans,              &lt U_NAV TAB,  &trans,    &trans,             &trans,             U_NP,              U_NP
