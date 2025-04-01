@@ -16,7 +16,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Swap position of ^ and @ in the `symbol` layer.
 - Move tab one key higher in `navigation` layer.
-- Replace old tab key with sticky shift in `navigation` layer.
+- Replace old tab key with caps_word in `navigation` layer.
 
 ### Removed
 
