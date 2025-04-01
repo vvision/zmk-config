@@ -5,39 +5,39 @@
 // |  | Q         | W         | E          |  R          |  T  |   |  Y  | U           |  I         |  O        |  P  |  |
 // |  | A -> LGUI | S -> LALT | D -> LCTRL | F -> LSHIFT |  G  |   |  H  | J -> RSHIFT | K -> RCTRL | L -> RALT | DIA |  |
 // |  | Z         | X         | C          |  V          |  B  |   |  N  | M           |  ,         |  .        |  /  |  |
-//                                | ESC | LSHIFT | SPC -> NAV  |   | ENT -> SYM | BSPC -> NUM | DEL |
+//                        | ESC | ESC -> LSHIFT | SPC -> NAV  |   | ENT -> SYM | BSPC -> NUM | DEL |
 //
 #define UNICODA_ALTERNATIVES_BASE_QWERTY \
 &kp Q,          &kp W,          &kp E,          &kp R,              &kp T,             &kp Y,         &kp U,            &kp I,          &kp O,          &kp P,     \
 U_MT(LGUI, A),  U_MT(LALT, S),  U_MT(LCTRL, D), U_MT(LSHIFT, F),    &kp G,             &kp H,         U_MT(RSHIFT, J),  U_MT(RCTRL, K), U_MT(RALT, L),  &sl U_DIA, \
 &kp Z,          &kp X,          &kp C,          &kp V,              &kp B,             &kp N,         &kp M,            &u_comma_semi,  &u_dot_colon,   &kp FSLH,  \
-U_NP,           U_NP,           &kp ESC,        &sk LSHIFT,         &lt U_NAV SPACE,   &lt U_SYM RET, &lt U_NUM BSPC,   &kp DEL,        U_NP,           U_NP
+U_NP,           U_NP,           &kp ESC,        U_MT(LSHIFT, ESC),  &lt U_NAV SPACE,   &lt U_SYM RET, &lt U_NUM BSPC,   &kp DEL,        U_NP,           U_NP
 
 // https://ergol.org/
 // -----------------------------------------------------------------------------------------
 // |  | Q         | C         | O          | P           |  W  |   |  J  | M           | D          | DIA       | F         |  |
 // |  | A -> LGUI | S -> LALT | E -> LCTRL | N -> LSHIFT |  ,  |   |  L  | R -> RSHIFT | T -> RCTRL | I -> RALT | U -> RGUI |  |
 // |  | Z         | X         | -          | V           |  B  |   |  .  | H           | G          | Y         | K         |  |
-//                                | ESC | LSHIFT | SPC -> NAV  |   | ENT -> SYM | BSPC -> NUM | DEL |
+//                        | ESC | ESC -> LSHIFT | SPC -> NAV  |   | ENT -> SYM | BSPC -> NUM | DEL |
 //
 #define UNICODA_ALTERNATIVES_BASE_ERGOL \
 &kp Q,          &kp C,          &kp O,          &kp P,              &kp W,             &kp J,         &kp M,            &kp D,          &sl U_DIA_ERGOL,  &kp F,     \
 U_MT(LGUI, A),  U_MT(LALT, S),  U_MT(LCTRL, E), U_MT(LSHIFT, N),    &u_comma_semi,     &kp L,         U_MT(RSHIFT, R),  U_MT(RCTRL, T), U_MT(RALT, I),    U_MT(RGUI, U),   \
 &kp Z,          &kp X,          &u_minus_qmark, &kp V,              &kp B,             &u_dot_colon,  &kp H,            &kp G,          &kp Y,            &kp K,  \
-U_NP,           U_NP,           &kp ESC,        &sk LSHIFT,         &lt U_NAV SPACE,   &lt U_SYM RET, &lt U_NUM BSPC,   &kp DEL,        U_NP,             U_NP
+U_NP,           U_NP,           &kp ESC,        U_MT(LSHIFT, ESC),  &lt U_NAV SPACE,   &lt U_SYM RET, &lt U_NUM BSPC,   &kp DEL,        U_NP,             U_NP
 
 // https://colemakmods.github.io/mod-dh/
 // -----------------------------------------------------------------------------------------
 // |  | Q         | W         | F          | P           |  B  |   |  J  | L           | U          | Y       | ;         |  |
 // |  | A -> LGUI | R -> LALT | S -> LCTRL | T -> LSHIFT |  G  |   |  M  | N -> RSHIFT | E -> RCTRL | I -> RALT | O -> RGUI |  |
 // |  | Z         | X         | C          | D           |  V  |   |  K  | H           | ,          | .         | /         |  |
-//                                | ESC | LSHIFT | SPC -> NAV  |   | ENT -> SYM | BSPC -> NUM | DEL |
+//                        | ESC | ESC -> LSHIFT | SPC -> NAV  |   | ENT -> SYM | BSPC -> NUM | DEL |
 //
 #define UNICODA_ALTERNATIVES_BASE_COLEMAK_DH \
-&kp Q,          &kp W,          &kp F,          &kp P,            &kp B,             &kp J,          &kp L,            &kp U,          &kp Y,          &kp SEMI,      \
-U_MT(LGUI, A),  U_MT(LALT, R),  U_MT(LCTRL, S), U_MT(LSHIFT, T),  &kp G,             &kp M,          U_MT(RSHIFT, N),  U_MT(RCTRL, E), U_MT(RALT, I),  U_MT(RGUI, O), \
-&kp Z,          &kp X,          &kp C,          &kp D,            &kp V,             &kp K,          &kp H,            &kp COMMA,      &kp DOT,        &kp FSLH,      \
-U_NP,           U_NP,           &kp ESC,        &sk LSHIFT,       &lt U_NAV SPACE,   &lt U_SYM RET,  &lt U_NUM BSPC,   &kp DEL,        U_NP,           U_NP
+&kp Q,          &kp W,          &kp F,          &kp P,              &kp B,             &kp J,          &kp L,            &kp U,          &kp Y,          &kp SEMI,      \
+U_MT(LGUI, A),  U_MT(LALT, R),  U_MT(LCTRL, S), U_MT(LSHIFT, T),    &kp G,             &kp M,          U_MT(RSHIFT, N),  U_MT(RCTRL, E), U_MT(RALT, I),  U_MT(RGUI, O), \
+&kp Z,          &kp X,          &kp C,          &kp D,              &kp V,             &kp K,          &kp H,            &kp COMMA,      &kp DOT,        &kp FSLH,      \
+U_NP,           U_NP,           &kp ESC,        U_MT(LSHIFT, ESC),  &lt U_NAV SPACE,   &lt U_SYM RET,  &lt U_NUM BSPC,   &kp DEL,        U_NP,           U_NP
 
 
 // Lafayette/ErgoL AltGr symbols
@@ -45,23 +45,23 @@ U_NP,           U_NP,           &kp ESC,        &sk LSHIFT,       &lt U_NAV SPAC
 // |  | ^ | < | > | $ | % |   |  @  | & | * | ' | ` |  |
 // |  | { | ( | ) | } | = |   |  \  | + | - | / | " |  |
 // |  | ~ | [ | ] | _ | # |   | "|" | ! | ; | : | ? |  |
-//     |  |  | TAB -> NAV |   |  |  |  |
+//             |  |   |   |   |  |  |  |
 #define UNICODA_ALTERNATIVES_SYM \
 &kp CARET,        &kp LT,           &kp GT,            &kp DLLR,            &kp PRCNT,      &kp AT,    &kp AMPS,           &kp STAR,           &sqt_space,        &grave_space, \
 U_MT(LGUI, LBRC), U_MT(LALT, LPAR), U_MT(LCTRL, RPAR), U_MT(LSHIFT, RBRC),  &kp EQUAL,      &kp BSLH,  U_MT(RSHIFT, PLUS), U_MT(RCTRL, MINUS), U_MT(RALT, SLASH), &hm_dqt_space RGUI 0,   \
 &tilde_space,     &kp LBKT,         &kp RBKT,          &kp UNDER,           &kp HASH,       &kp PIPE,  &kp EXCL,           &kp SEMI,           &kp COLON,         &kp QMARK,    \
-U_NP,             U_NP,             &trans,            &trans,              &lt U_NAV TAB,  &trans,    &trans,             &trans,             U_NP,              U_NP
+U_NP,             U_NP,             &trans,            &trans,              &trans,         &trans,    &trans,             &trans,             U_NP,              U_NP
 
 // -----------------------------------------------------------------------------------------
-// |  | ESC         | Home |  Up  | End   | PG_UP |   |  /  | 7           | 8          | 9         |           |  |
-// |  | TAB -> LGUI | Left | Down | Right | PG_DN |   |  -  | 4 -> RSHIFT | 5 -> RCTRL | 6 -> RALT | 0 -> RGUI |  |
-// |  | Undo        | Cut  | Copy | Paste |  Del  |   |  ,  | 1           | 2          | 3         | .       |  |
-//                                       |  |  |  |   |  |  |  |
+// |  | TAB       | Home |  Up  | End   | PG_UP   |   |  /  | 7           | 8          | 9         |           |  |
+// |  | SK LSHIFT | Left | Down | Right | PG_DN   |   |  -  | 4 -> RSHIFT | 5 -> RCTRL | 6 -> RALT | 0 -> RGUI |  |
+// |  | Undo      | Cut  | Copy | Paste | LS(TAB) |   |  ,  | 1           | 2          | 3         | .       |  |
+//                                         |  |  |  |   |  |  |  |
 #define UNICODA_ALTERNATIVES_NAV_NUM \
-&kp ESC,       &kp HOME,  &kp UP,    &kp END,    &kp PG_UP,    &kp SLASH, &kp N7,         &kp N8,       &kp N9,      U_NU,         \
-&hm LGUI TAB,  &kp LEFT,  &kp DOWN,  &kp RIGHT,  &kp PG_DN,    &kp MINUS, &hm RSHIFT N4,  &hm RCTRL N5, &hm RALT N6, &hm RGUI N0,  \
-&kp LC(Z),     &kp LC(X), &kp LC(C), &kp LC(V),  &kp DEL,      &kp COMMA, &kp N1,         &kp N2,       &kp N3,      &kp DOT,      \
-U_NP,          U_NP,      &trans,    &trans,     &trans,       &trans,    &trans,         &trans,       U_NP,        U_NP
+&kp TAB,     &kp HOME,  &kp UP,    &kp END,    &kp PG_UP,    &kp SLASH, &kp N7,         &kp N8,       &kp N9,      U_NU,         \
+&sk LSHIFT,  &kp LEFT,  &kp DOWN,  &kp RIGHT,  &kp PG_DN,    &kp MINUS, &hm RSHIFT N4,  &hm RCTRL N5, &hm RALT N6, &hm RGUI N0,  \
+&kp LC(Z),   &kp LC(X), &kp LC(C), &kp LC(V),  &kp LS(TAB),  &kp COMMA, &kp N1,         &kp N2,       &kp N3,      &kp DOT,      \
+U_NP,        U_NP,      &trans,    &trans,     &trans,       &trans,    &trans,         &trans,       U_NP,        U_NP
 
 // Inspired by selenium33: https://github.com/OneDeadKey/arsenik/tree/main/mods/selenium33#extended-navigation
 // -----------------------------------------------------------------------------------------
