@@ -53,13 +53,13 @@ U_MT(LGUI, LBRC), U_MT(LALT, LPAR), U_MT(LCTRL, RPAR), U_MT(LSHIFT, RBRC),  &kp 
 U_NP,             U_NP,             &trans,            &trans,              &trans,         &trans,    &trans,             &trans,             U_NP,              U_NP
 
 // -----------------------------------------------------------------------------------------
-// |  | TAB       | Home |  Up  | End   | PG_UP   |   |  /  | 7           | 8          | 9         |           |  |
-// |  | caps_word | Left | Down | Right | PG_DN   |   |  -  | 4 -> RSHIFT | 5 -> RCTRL | 6 -> RALT | 0 -> RGUI |  |
-// |  | Undo      | Cut  | Copy | Paste | LS(TAB) |   |  ,  | 1           | 2          | 3         | .       |  |
+// |  | TAB  | Home |  Up  | End   | PG_UP   |   |  /  | 7           | 8          | 9         |           |  |
+// |  | All  | Left | Down | Right | PG_DN   |   |  -  | 4 -> RSHIFT | 5 -> RCTRL | 6 -> RALT | 0 -> RGUI |  |
+// |  | Undo | Cut  | Copy | Paste | LS(TAB) |   |  ,  | 1           | 2          | 3         | .       |  |
 //                                         |  |  |  |   |  |  |  |
 #define UNICODA_ALTERNATIVES_NAV_NUM \
 &kp TAB,     &kp HOME,  &kp UP,    &kp END,    &kp PG_UP,    &kp SLASH, &kp N7,         &kp N8,       &kp N9,      U_NU,         \
-&caps_word,  &kp LEFT,  &kp DOWN,  &kp RIGHT,  &kp PG_DN,    &kp MINUS, &hm RSHIFT N4,  &hm RCTRL N5, &hm RALT N6, &hm RGUI N0,  \
+&kp LC(A),  &kp LEFT,  &kp DOWN,  &kp RIGHT,  &kp PG_DN,    &kp MINUS, &hm RSHIFT N4,  &hm RCTRL N5, &hm RALT N6, &hm RGUI N0,  \
 &kp LC(Z),   &kp LC(X), &kp LC(C), &kp LC(V),  &kp LS(TAB),  &kp COMMA, &kp N1,         &kp N2,       &kp N3,      &kp DOT,      \
 U_NP,        U_NP,      &trans,    &trans,     &trans,       &trans,    &trans,         &trans,       U_NP,        U_NP
 
