@@ -1,0 +1,10 @@
+/*
+ * Copyright (c) 2020 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+
+#include "./src/custom_config.h"
+#include "./src/mapping/34/ferris.h"
+#include "./src/layout.dtsi"
