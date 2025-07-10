@@ -43,6 +43,7 @@ Other interesting tools:
 ### References
 
 - [splitkb - Aurora Corne](https://github.com/splitkb/aurora/tree/master/Aurora%20Corne)
+- [Pin your ZMK version](https://zmk.dev/blog/2025/06/20/pinned-zmk)
 
 ### Inspiration
 
