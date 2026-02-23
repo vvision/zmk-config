@@ -43,7 +43,11 @@ Other interesting tools:
 ### References
 
 - [splitkb - Aurora Corne](https://github.com/splitkb/aurora/tree/master/Aurora%20Corne)
+
+#### ZMK
 - [Pin your ZMK version](https://zmk.dev/blog/2025/06/20/pinned-zmk)
+- [Version Bumping](https://zmk.dev/blog/2025/06/20/pinned-zmk#version-bumping)
+Change version in `west.yml` and `.github/workflows/build.yml`
 
 ### Inspiration
 
