@@ -13,16 +13,24 @@
 #
 ---
 include:
-  # Aurora Corne Build
+#  # Aurora Corne Build
+#  - board: nice_nano_v2
+#    shield: splitkb_aurora_corne_left
+#  - board: nice_nano_v2
+#    shield: splitkb_aurora_corne_right
+#  # Aurora Sweep Build
+#  - board: nice_nano_v2
+#    shield: splitkb_aurora_sweep_left
+#  - board: nice_nano_v2
+#    shield: splitkb_aurora_sweep_right
+  # Aurora Sweep Build With Dongle
+  # Before flashing your new firmware, you need to flash settings_reset firmware on all devices to ensure they can pair to each other.
   - board: nice_nano_v2
-    shield: splitkb_aurora_corne_left
+    shield: ferris_hub_dongle
+  # Add these cmake-args to the peripherals you wish to use with the dongle
   - board: nice_nano_v2
-    shield: splitkb_aurora_corne_right
-  # Aurora Sweep Build
-  - board: nice_nano_v2
-    shield: splitkb_aurora_sweep_left
-  - board: nice_nano_v2
-    shield: splitkb_aurora_sweep_right
+    shield: ferris_hub
+    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
   # Reset Build
   - board: nice_nano_v2
     shield: settings_reset
